@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', 'HomeController@index');
 
 
 /*
@@ -30,6 +26,15 @@ Route::get('/home', 'HomeController@index');
 */
 
 Route::group(['middleware' => 'web'], function () {
+    //Authentification
     Route::auth();
+    //Divers
+    Route::get('/home', 'HomeController@index');
+    Route::get('/', 'HomeController@index');
+    Route::get('/about', 'HomeController@about');
+
+
+//Find route
+    Route::get('/find', 'FindController@index');
 
 });
