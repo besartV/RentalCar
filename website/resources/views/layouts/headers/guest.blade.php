@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Rental car</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
-
-    <!-- Styles -->
-    <link href="{{ url('css/app.css') }}" rel="stylesheet">
-    <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ url('css/font-awesome.min.css') }}" rel="stylesheet">
-</head>
+@include('layouts.headers.head')
 <body id="app-layout">
 <nav class="navbar navbar-default">
     <div class="container">
@@ -33,6 +17,11 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/home') }}">Home</a></li>
                 <li><a href="{{ url('/find') }}">Find</a></li>
+                @if (!Auth::guest())
+                    @if (Auth::user()->isAdmin())
+                        <li><a href="{{ url('/admin') }}">Admin panel</a></li>
+                    @endif
+                @endif
                 <li><a href="{{ url('/about') }}">About</a></li>
             </ul>
 
@@ -43,7 +32,8 @@
                     <li><a href="{{ url('/register') }}">Register</a></li>
                 @else
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false">
                             <i class="fa fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
@@ -54,6 +44,7 @@
                 @endif
             </ul>
         </div>
+
+
     </div>
 </nav>
-

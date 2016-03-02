@@ -12,8 +12,6 @@
 */
 
 
-
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -34,7 +32,20 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/about', 'HomeController@about');
 
 
-//Find route
+    //Find route
     Route::get('/find', 'FindController@index');
+});
 
+Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMiddleware','web']], function()
+{
+    Route::get('/', 'AdminController@index');
+
+    //Users
+    Route::get('/users', 'AdminController@users');
+
+    //Cars
+    Route::get('/cars', 'AdminController@cars');
+
+    //Locations
+    Route::get('/locations', 'AdminController@locations');
 });

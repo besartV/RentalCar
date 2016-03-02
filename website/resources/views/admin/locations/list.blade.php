@@ -1,10 +1,10 @@
-@extends('layouts.appGuest')
+@extends('layouts.appAdmin')
 
 @section('content')
     <section>
         <div class="container container-margin">
             <div class="jumbotron">
-                <h1>ABOUT PAGE</h1>
+                <h1>List locations page</h1>
             </div>
         </div>
     </section>
