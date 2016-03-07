@@ -45,6 +45,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMi
 
     //Cars
     Route::get('/cars', 'AdminController@cars');
+    Route::get('/cars/add', 'AdminController@formAdd');
+    Route::post('/cars/add', 'AdminController@storeCar');
+    Route::get('/cars/{id}', 'AdminController@destroyCar');
 
     //Locations
     Route::get('/locations', 'AdminController@locations');

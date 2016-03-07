@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="rcApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,4 +14,5 @@
     <link href="{{ url('css/app.css') }}" rel="stylesheet">
     <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url('css/font-awesome.min.css') }}" rel="stylesheet">
+
 </head>

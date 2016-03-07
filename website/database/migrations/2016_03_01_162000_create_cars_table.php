@@ -13,6 +13,7 @@ class CreateCarsTable extends Migration
     public function up()
     {
         Schema::create('cars', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('model');
             $table->string('type');
@@ -20,7 +21,8 @@ class CreateCarsTable extends Migration
             $table->string('fuel');
             $table->string('picture');
             $table->double('rental_price');
-            $table->integer('location_id')->unsigned();
+            $table->integer('location_id')->unsigned()->nullable();
+            $table->timestamps();
         });
     }
 
