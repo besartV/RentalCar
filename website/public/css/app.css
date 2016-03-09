@@ -68,9 +68,10 @@ nav {
     transform: translate(-50%, -90%)
 }
 
-
-
-
+#map {
+    height: 400px;
+    width: 100%;
+}
 
 
 

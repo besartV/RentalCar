@@ -36,8 +36,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/find', 'FindController@index');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMiddleware','web']], function()
-{
+Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMiddleware', 'web']], function () {
     Route::get('/', 'AdminController@index');
 
     //Users
@@ -45,10 +44,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMi
 
     //Cars
     Route::get('/cars', 'AdminController@cars');
-    Route::get('/cars/add', 'AdminController@formAdd');
-    Route::post('/cars/add', 'AdminController@storeCar');
-    Route::get('/cars/{id}', 'AdminController@destroyCar');
+    Route::get('/car/add', 'AdminController@formAddCar');
+    Route::post('/car/add', 'AdminController@storeCar');
+    Route::get('/car/{id}/delete', 'AdminController@destroyCar');
+    Route::get('/car/{id}', 'AdminController@descriptionCar');
 
     //Locations
     Route::get('/locations', 'AdminController@locations');
+    Route::get('/location/add', 'AdminController@formAddLocation');
+    Route::post('/location/add', 'AdminController@storeLocation');
+    Route::get('/location/{id}/delete', 'AdminController@destroyLocation');
 });

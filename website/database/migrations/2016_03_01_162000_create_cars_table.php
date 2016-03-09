@@ -17,9 +17,11 @@ class CreateCarsTable extends Migration
             $table->increments('id');
             $table->string('model');
             $table->string('type');
+            $table->longText('description');
             $table->string('color');
             $table->string('fuel');
             $table->string('picture');
+            $table->integer('sits');
             $table->double('rental_price');
             $table->integer('location_id')->unsigned()->nullable();
             $table->timestamps();

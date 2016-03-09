@@ -10,7 +10,7 @@
                             Add car
                         </h1>
 
-                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method="POST" action="{{ url('/admin/cars/add') }}">
+                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method="POST" action="{{ url('/admin/car/add') }}">
                             {!! csrf_field() !!}
 
                             <div class="form-group{{ $errors->has('model') ? ' has-error' : '' }}">
@@ -36,6 +36,20 @@
                                     @if ($errors->has('type'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('type') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
+                                <label class="col-md-1 control-label">Description</label>
+
+                                <div class="col-md-6">
+                                <textarea class="form-control" rows="3" name="description" value="{{ old('description') }}"></textarea>
+
+                                    @if ($errors->has('description'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('description') }}</strong>
                                     </span>
                                     @endif
                                 </div>
@@ -76,8 +90,22 @@
                                 </div>
                             </div>
 
+                            <div class="form-group{{ $errors->has('sits') ? ' has-error' : '' }}">
+                                <label class="col-md-1 control-label">Number of sits</label>
+
+                                <div class="col-md-6">
+                                    <input type="number" class="form-control" name="sits" value="{{ old('sits') }}">
+
+                                    @if ($errors->has('sits'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('sits') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class="form-group{{ $errors->has('rental_price') ? ' has-error' : '' }}">
-                                <label class="col-md-1 control-label">Rental price</label>
+                                <label class="col-md-1 control-label">Rental price per day</label>
 
                                 <div class="col-md-6">
                                     <input type="number" class="form-control" name="rental_price" value="{{ old('rental_price') }}">

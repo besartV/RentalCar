@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Car;
+use App\Location;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,6 @@ class AdminController extends Controller
         return view('admin.users.list', ['users' => $users]);
     }
 
-
     /**
      * Car section
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -38,7 +38,7 @@ class AdminController extends Controller
         return view('admin.cars.list', ['cars' => $cars]);
     }
 
-    public function formAdd()
+    public function formAddCar()
     {
         return view('admin.cars.add');
     }
@@ -50,13 +50,14 @@ class AdminController extends Controller
 
     public function storeCar(Request $request)
     {
-        //dd(base_path());
         $this->validate($request, [
             'model' => 'required|max:255',
             'type' => 'required|max:255',
+            'description' => 'required|max:255',
             'color' => 'required|max:255',
             'fuel' => 'required|max:255',
             'rental_price' => 'required|max:255',
+            'sits' => 'required|max:255',
             'picture' => 'required',
         ]);
 
@@ -65,6 +66,8 @@ class AdminController extends Controller
         $car->type = $request['type'];
         $car->color = $request['color'];
         $car->fuel = $request['fuel'];
+        $car->description = $request['description'];
+        $car->sits = $request['sits'];
         $car->rental_price = $request['rental_price'];
         $car->save();
 
@@ -79,6 +82,11 @@ class AdminController extends Controller
         return redirect('/admin/cars');
     }
 
+    public function descriptionCar($id) {
+        $car = Car::find($id);
+        return view('admin.cars.desc', ['car' => $car]);
+    }
+
     public function destroyCar($id)
     {
         Car::destroy($id);
@@ -91,6 +99,39 @@ class AdminController extends Controller
      */
     public function locations()
     {
-        return view('admin.locations.list');
+        $locations = Location::all();
+        return view('admin.locations.list', ['locations' => $locations]);
+    }
+
+    public function formAddLocation() {
+        return view('admin.locations.add');
+    }
+
+    public function storeLocation(Request $request) {
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'address' => 'required|max:255',
+            'city' => 'required|max:255',
+            'country' => 'required|max:255',
+            'latitude' => 'required|max:255',
+            'longitude' => 'required',
+        ]);
+
+        $location = new Location();
+        $location->name = $request->name;
+        $location->address = $request->address;
+        $location->city = $request->city;
+        $location->country = $request->country;
+        $location->latitude = $request->latitude;
+        $location->longitude = $request->longitude;
+
+        $location->save();
+
+        return redirect('/admin/locations');
+    }
+
+    public function destroyLocation($id) {
+        Location::destroy($id);
+        return redirect('/admin/locations');
     }
 }
