@@ -15,8 +15,7 @@ nav {
     margin-right: 6px;
 }
 
-
-@media(min-width:768px) {
+@media (min-width: 768px) {
     body {
         margin-top: 50px;
     }
@@ -37,7 +36,7 @@ nav {
     line-height: normal;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     #wrapper {
         padding-left: 225px;
     }
@@ -46,7 +45,6 @@ nav {
         padding: 10px;
     }
 }
-
 
 /* Home page */
 
@@ -57,7 +55,8 @@ nav {
     background-position: center top;
     background-attachment: fixed;
     height: 100vh;
-    margin: 0;padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #home .home-block {
@@ -73,15 +72,6 @@ nav {
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
 /* DIVERS */
 /* Top Navigation */
 
@@ -89,40 +79,40 @@ nav {
     padding: 0 15px;
 }
 
-.top-nav>li {
+.top-nav > li {
     display: inline-block;
     float: left;
 }
 
-.top-nav>li>a {
+.top-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
     color: #999;
 }
 
-.top-nav>li>a:hover,
-.top-nav>li>a:focus,
-.top-nav>.open>a,
-.top-nav>.open>a:hover,
-.top-nav>.open>a:focus {
+.top-nav > li > a:hover,
+.top-nav > li > a:focus,
+.top-nav > .open > a,
+.top-nav > .open > a:hover,
+.top-nav > .open > a:focus {
     color: #fff;
     background-color: #000;
 }
 
-.top-nav>.open>.dropdown-menu {
+.top-nav > .open > .dropdown-menu {
     float: left;
     position: absolute;
     margin-top: 0;
-    border: 1px solid rgba(0,0,0,.15);
+    border: 1px solid rgba(0, 0, 0, .15);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: #fff;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
-.top-nav>.open>.dropdown-menu>li>a {
+.top-nav > .open > .dropdown-menu > li > a {
     white-space: normal;
 }
 
@@ -135,10 +125,10 @@ ul.message-dropdown {
 
 li.message-preview {
     width: 275px;
-    border-bottom: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
 }
 
-li.message-preview>a {
+li.message-preview > a {
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -153,7 +143,7 @@ ul.alert-dropdown {
 
 /* Side Navigation */
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .side-nav {
         position: fixed;
         top: 45px;
@@ -169,7 +159,7 @@ ul.alert-dropdown {
         padding-bottom: 40px;
     }
 
-    .side-nav>li>a {
+    .side-nav > li > a {
         width: 225px;
     }
 
@@ -180,18 +170,18 @@ ul.alert-dropdown {
     }
 }
 
-.side-nav>li>ul {
+.side-nav > li > ul {
     padding: 0;
 }
 
-.side-nav>li>ul>li>a {
+.side-nav > li > ul > li > a {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
     color: #999;
 }
 
-.side-nav>li>ul>li>a:hover {
+.side-nav > li > ul > li > a:hover {
     color: #fff;
 }
 
@@ -210,7 +200,7 @@ ul.alert-dropdown {
     line-height: normal;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     #wrapper {
         padding-left: 225px;
     }
@@ -222,4 +212,12 @@ ul.alert-dropdown {
 
 #admin-logout a:hover {
     background-color: inherit;
+}
+
+/* find calendar */
+#findCalendar .input-group .input-sm{
+    border-radius: 0px !important;
+}
+#findCalendar div .input-city{
+    padding: 0 !important;
 }

@@ -14,5 +14,5 @@
     <link href="{{ url('css/app.css') }}" rel="stylesheet">
     <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url('css/font-awesome.min.css') }}" rel="stylesheet">
-
+    <link href="{{ url('css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
 </head>

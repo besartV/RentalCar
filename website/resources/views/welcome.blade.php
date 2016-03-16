@@ -12,7 +12,7 @@
                         </blockquote>
 
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary">Find your rentalcar !</a>
+                            <a href="{{ url('/find') }}" class="btn btn-primary">Find your rentalcar !</a>
                         </div>
                     </div>
                 </div>

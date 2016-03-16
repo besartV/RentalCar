@@ -34,6 +34,8 @@ Route::group(['middleware' => 'web'], function () {
 
     //Find route
     Route::get('/find', 'FindController@index');
+    Route::post('/find', 'FindController@fetch');
+
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMiddleware', 'web']], function () {

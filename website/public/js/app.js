@@ -1,27 +1,12 @@
 'use strict';
-/*
- var rc  = (function() {
- return {
- modules: {}
- }
- })();
-
- rc.modules.home = (function() {
- return {
- init: function() {
-
- }
- }
- })();
- */
-
-//  rc.modules.home.init();
 angular.module('rcApp', []).config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('//');
     $interpolateProvider.endSymbol('//');
 }).controller('MapController', function ($scope) {
+    console.log('FindFormController');
     var geocoder = new google.maps.Geocoder();
     this.test = "..Angular.. TEST..";
+
     $scope.address = '';
     $scope.city = '';
     $scope.country = '';
@@ -52,4 +37,12 @@ angular.module('rcApp', []).config(function($interpolateProvider) {
     };
 
 
+}).controller('FindFormController', function ($scope){
+    console.log('FindFormController');
+
+    $('#findCalendar .input-daterange').datepicker({
+        format: "dd/mm/yyyy",
+        startDate: "today",
+        todayHighlight: true
+    });
 });

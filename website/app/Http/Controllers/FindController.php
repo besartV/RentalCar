@@ -12,4 +12,14 @@ class FindController extends Controller
     public function index() {
         return view('find.findform');
     }
+
+    public function fetch(Request $request) {
+        $this->validate($request, [
+            'start' => 'required|max:255',
+            'end' => 'required|max:255',
+            'city' => 'required|max:255',
+        ]);
+
+        
+    }
 }
