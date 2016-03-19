@@ -21,6 +21,7 @@
                                 <th>Color</th>
                                 <th>Fuel</th>
                                 <th>Sits</th>
+                                <th>Location</th>
                                 <th>Price/Day</th>
                                 <th></th>
                                 <th></th>
@@ -39,6 +40,7 @@
                                         <td>{{$car->color}}</td>
                                         <td>{{$car->fuel}}</td>
                                         <td>{{$car->sits}}</td>
+                                        <td>{{$car->location}}</td>
                                         <td>{{$car->rental_price}}</td>
                                         <td><a href="{{ url('/admin/car/'.$car->id . '/edit') }}"><i class="fa fa-lg fa-edit"></i></a></td>
                                         <td><a href="{{ url('/admin/car/'.$car->id . '/delete') }}"><i

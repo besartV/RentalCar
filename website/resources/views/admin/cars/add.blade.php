@@ -10,7 +10,8 @@
                             Add car
                         </h1>
 
-                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method="POST" action="{{ url('/admin/car/add') }}">
+                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method="POST"
+                              action="{{ url('/admin/car/add') }}">
                             {!! csrf_field() !!}
 
                             <div class="form-group{{ $errors->has('model') ? ' has-error' : '' }}">
@@ -45,7 +46,8 @@
                                 <label class="col-md-1 control-label">Description</label>
 
                                 <div class="col-md-6">
-                                <textarea class="form-control" rows="3" name="description" value="{{ old('description') }}"></textarea>
+                                    <textarea class="form-control" rows="3"
+                                              name="description">{{ old('description') }}</textarea>
 
                                     @if ($errors->has('description'))
                                         <span class="help-block">
@@ -90,6 +92,7 @@
                                 </div>
                             </div>
 
+
                             <div class="form-group{{ $errors->has('sits') ? ' has-error' : '' }}">
                                 <label class="col-md-1 control-label">Number of sits</label>
 
@@ -104,11 +107,30 @@
                                 </div>
                             </div>
 
+                            <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
+                                <label class="col-md-1 control-label">Location</label>
+
+                                <div class="col-md-6">
+                                    <select class="form-control" name="location" id="select">
+                                        @foreach($locations as $location)
+                                            <option value="{{$location->id}}">{{$location->city . ' - ' . $location->name}}</option>
+                                        @endforeach
+                                    </select>
+
+                                    @if ($errors->has('location'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('location') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class="form-group{{ $errors->has('rental_price') ? ' has-error' : '' }}">
                                 <label class="col-md-1 control-label">Rental price per day</label>
 
                                 <div class="col-md-6">
-                                    <input type="number" class="form-control" name="rental_price" value="{{ old('rental_price') }}">
+                                    <input type="number" class="form-control" name="rental_price"
+                                           value="{{ old('rental_price') }}">
 
                                     @if ($errors->has('rental_price'))
                                         <span class="help-block">

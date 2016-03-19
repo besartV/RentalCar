@@ -6,7 +6,8 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method="POST" action="{{ url('/find') }}">
+                            {!! csrf_field() !!}
                             <fieldset>
                                 <legend>Your rental car!</legend>
                                 <div class="form-group{{ $errors->has('start') ? ' has-error' : $errors->has('end') ? ' has-error' : ''}}"
@@ -17,17 +18,10 @@
                                         <input type="text" class="input-sm form-control" name="start"/>
                                         <span class="input-group-addon">to</span>
                                         <input type="text" class="input-sm form-control" name="end"/>
-                                        @if ($errors->has('start') || $errors->has('end'))
-                                            <span class="help-block">
-                                        <strong>{{ $errors->first('start') }}</strong>
-                                    </span>
-                                            <span class="help-block">
-                                        <strong>{{ $errors->first('end') }}</strong>
-                                    </span>
-                                        @endif
-                                    </div>
+
                                 </div>
 
+                                </div>
                                 <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
                                     <label class="col-md-2 control-label">City</label>
 

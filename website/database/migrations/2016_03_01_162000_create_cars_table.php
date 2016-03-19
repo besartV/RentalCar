@@ -23,7 +23,7 @@ class CreateCarsTable extends Migration
             $table->string('picture');
             $table->integer('sits');
             $table->double('rental_price');
-            $table->integer('location_id')->unsigned()->nullable();
+            $table->integer('location_id')->unsigned();
             $table->timestamps();
         });
     }

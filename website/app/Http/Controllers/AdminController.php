@@ -40,7 +40,8 @@ class AdminController extends Controller
 
     public function formAddCar()
     {
-        return view('admin.cars.add');
+        $locations = Location::all();
+        return view('admin.cars.add', ['locations' => $locations]);
     }
 
     public function formUpdate()
@@ -58,8 +59,11 @@ class AdminController extends Controller
             'fuel' => 'required|max:255',
             'rental_price' => 'required|max:255',
             'sits' => 'required|max:255',
+            'location' => 'required|max:255',
             'picture' => 'required',
         ]);
+
+        //dd(intval($request['location']));
 
         $car = new Car();
         $car->model = $request['model'];
@@ -68,6 +72,7 @@ class AdminController extends Controller
         $car->fuel = $request['fuel'];
         $car->description = $request['description'];
         $car->sits = $request['sits'];
+        $car->location_id = intval($request['location']);
         $car->rental_price = $request['rental_price'];
         $car->save();
 
