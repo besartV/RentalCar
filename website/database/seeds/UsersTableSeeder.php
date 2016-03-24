@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@car.com',
             'password' => bcrypt('secret'),
             'admin' => true,
-            'address' => '10 street of peace...'
+            'address' => '10 street of peace...',
         ]);
 
         DB::table('users')->insert([
@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'user@car.com',
             'password' => bcrypt('secret'),
             'admin' => false,
-            'address' => '1345 street of peace...'
+            'address' => '1345 street of peace...',
         ]);
     }
 }

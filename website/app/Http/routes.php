@@ -23,6 +23,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Response;
+
 Route::group(['middleware' => 'web'], function () {
     //Authentification
     Route::auth();
@@ -57,3 +59,21 @@ Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMi
     Route::post('/location/add', 'AdminController@storeLocation');
     Route::get('/location/{id}/delete', 'AdminController@destroyLocation');
 });
+
+
+//API
+Route::group(['prefix' => 'api', 'middleware' => 'api'], function() {
+    Route::get('/findCities', 'ApiController@findCities');
+    Route::get('/findPlaces/{city}', 'ApiController@findPlaces');
+
+    Route::get('/cars', 'ApiController@cars');
+    Route::get('/find', 'ApiController@find');
+
+    Route::post('/register', 'AuthenticateApiController@register');
+    Route::post('/login', 'AuthenticateApiController@login');
+});
+
+Route::group(['before' => 'jwt-auth', 'prefix' => 'api'], function () {
+    Route::get('/restricted', 'ApiController@booked');
+});
+

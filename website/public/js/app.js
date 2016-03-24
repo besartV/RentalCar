@@ -1,5 +1,5 @@
 'use strict';
-angular.module('rcApp', []).config(function($interpolateProvider) {
+angular.module('rcApp', []).config(function ($interpolateProvider) {
     $interpolateProvider.startSymbol('//');
     $interpolateProvider.endSymbol('//');
 }).controller('MapController', function ($scope) {
@@ -16,12 +16,10 @@ angular.module('rcApp', []).config(function($interpolateProvider) {
         zoom: 14
     });
 
-    $scope.geo = function() {
+    $scope.geo = function () {
         console.log($scope.address + ' ' + $scope.city);
-        geocoder.geocode( { 'address': $scope.address + ' ' + $scope.city + ' ' + $scope.country}, function(results, status) {
+        geocoder.geocode({'address': $scope.address + ' ' + $scope.city + ' ' + $scope.country}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                console.log('success');
-                console.log(results[0]);
                 map.setCenter(results[0].geometry.location);
                 $scope.lat = results[0].geometry.location.lat();
                 $scope.long = results[0].geometry.location.lng();
@@ -31,13 +29,12 @@ angular.module('rcApp', []).config(function($interpolateProvider) {
                 });
             } else {
                 console.log('does not work...');
-                //alert("Geocode was not successful for the following reason: " + status);
             }
         });
     };
 
 
-}).controller('FindFormController', function ($scope){
+}).controller('FindFormController', function ($scope, $http) {
     console.log('FindFormController');
 
     $('#findCalendar .input-daterange').datepicker({
@@ -45,4 +42,27 @@ angular.module('rcApp', []).config(function($interpolateProvider) {
         startDate: "today",
         todayHighlight: true
     });
+
+
+    $http({
+        url: APP_URL + '/api/findCities',
+        method: 'GET'
+    }).success(function (data) {
+        console.log(data);
+        $scope.cities = data;
+    });
+
+
+    $scope.findPlaces = function (city) {
+        console.log('TEST...' + city);
+        if (city != null) {
+            $http({
+                url: APP_URL + '/api/findPlaces/' + city,
+                method: 'GET'
+            }).success(function (data) {
+                console.log(data);
+                $scope.places = data;
+            });
+        }
+    };
 });

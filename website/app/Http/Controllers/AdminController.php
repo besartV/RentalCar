@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class AdminController extends Controller
@@ -35,6 +36,10 @@ class AdminController extends Controller
     public function cars()
     {
         $cars = Car::all();
+        foreach ($cars as $car) {
+            $location = Location::find($car->location_id);
+            $car->locationName = $location->city . ' - ' . $location->name;
+        }
         return view('admin.cars.list', ['cars' => $cars]);
     }
 
@@ -63,7 +68,6 @@ class AdminController extends Controller
             'picture' => 'required',
         ]);
 
-        //dd(intval($request['location']));
 
         $car = new Car();
         $car->model = $request['model'];
@@ -87,14 +91,17 @@ class AdminController extends Controller
         return redirect('/admin/cars');
     }
 
-    public function descriptionCar($id) {
+    public function descriptionCar($id)
+    {
         $car = Car::find($id);
         return view('admin.cars.desc', ['car' => $car]);
     }
 
     public function destroyCar($id)
     {
-        Car::destroy($id);
+        $car = Car::find($id);
+        File::delete(public_path() . '/images/cars/' . $car->picture);
+        $car->delete();
         return redirect('/admin/cars');
     }
 
@@ -108,11 +115,13 @@ class AdminController extends Controller
         return view('admin.locations.list', ['locations' => $locations]);
     }
 
-    public function formAddLocation() {
+    public function formAddLocation()
+    {
         return view('admin.locations.add');
     }
 
-    public function storeLocation(Request $request) {
+    public function storeLocation(Request $request)
+    {
         $this->validate($request, [
             'name' => 'required|max:255',
             'address' => 'required|max:255',
@@ -135,7 +144,8 @@ class AdminController extends Controller
         return redirect('/admin/locations');
     }
 
-    public function destroyLocation($id) {
+    public function destroyLocation($id)
+    {
         Location::destroy($id);
         return redirect('/admin/locations');
     }
