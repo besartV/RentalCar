@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -29,5 +31,22 @@ class HomeController extends Controller
 
     public function about() {
         return view('about');
+    }
+
+    public function booking() {
+        if (Auth::check())
+        {
+            $rentals = Auth::user()->rentals()->get();
+
+            foreach($rentals as $rental) {
+                $rental->car = $rental->car()->get()[0];
+                $rental->location = $rental->location()->get()[0];
+            }
+            //dd(session()->has('book'));
+            return view('booking', ['rentals' => $rentals]);
+        } else {
+            return redirect()->guest('login');
+        }
+
     }
 }

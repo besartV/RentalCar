@@ -19,6 +19,7 @@
                 <li><a href="{{ url('/find') }}">Find</a></li>
                 @if (!Auth::guest())
                     @if (Auth::user()->isAdmin())
+
                         <li><a href="{{ url('/admin') }}">Admin panel</a></li>
                     @endif
                 @endif
@@ -38,6 +39,7 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('/booking') }}"><i class="fa fa-btn fa-check-square-o"></i>Booking</a></li>
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                         </ul>
                     </li>

@@ -38,19 +38,15 @@ Route::group(['middleware' => 'web'], function () {
     //Find route
     Route::get('/find', 'FindController@index');
     Route::post('/find', 'FindController@fetch');
-});
 
-//Authentificate
-Route::group(['middleware' => 'auth'], function() {
     Route::get('/find/book/car/{id}/{from}/{to}', 'FindController@book');
+    Route::get('/booking', 'HomeController@booking');
 });
-
 
 //Admin
 Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMiddleware', 'web']], function () {
     Route::get('/', 'AdminController@index');
 
-    //Users
     Route::get('/users', 'AdminController@users');
 
     //Cars

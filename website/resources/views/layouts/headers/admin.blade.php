@@ -13,6 +13,7 @@
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav" id="admin-logout">
+        <li><a href="{{ url('/booking') }}"><i class="fa fa-btn fa-check-square-o"></i>Booking</a></li>
         <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>{{Auth::user()->name }} Logout</a></li>
     </ul>
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->

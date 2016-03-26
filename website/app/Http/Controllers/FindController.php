@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class FindController extends Controller
 {
@@ -43,7 +44,7 @@ class FindController extends Controller
             foreach ($rentals as $rental) {
                 //dd($rental->from . '    ' . $from);
                 //dd($rental->from > $from);
-                if (($rental->from > $from && $rental->from < $to) || ($rental->to > $from && $rental->to < $to) || ($rental->from < $from && $rental->to > $to)) {
+                if (($rental->from >= $from && $rental->from <= $to) || ($rental->to >= $from && $rental->to <= $to) || ($rental->from <= $from && $rental->to >= $to)) {
 
                     $add = false;
                     break;
@@ -58,7 +59,24 @@ class FindController extends Controller
     }
 
     public function book($car_id, $from, $to) {
-        dd('ok');
+        if (Auth::check())
+        {
+            $car = Car::find($car_id);
+            //dd(Auth::id());
+            $rental = new Rental();
+            $rental->from = $from;
+            $rental->to = $to;
+            $rental->car_id = $car_id;
+            $rental->location_id = $car->location_id;
+            $rental->user_id = Auth::id();
+
+            session(['book' => 'Congratulation, you have booked a car!']);
+
+            $rental->save();
+            return redirect('/booking');
+        } else {
+            return redirect()->guest('login');
+        }
     }
 
     private function formatDate($s)
