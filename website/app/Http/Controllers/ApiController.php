@@ -31,7 +31,6 @@ class ApiController extends Controller
         return Response::json(['data' => 'Congratulation, you booked a car!!!!!!!']);
     }
 
-
     public function findCities() {
         $cities = [];
         $locations = Location::all();

@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Car;
 use App\Location;
+use App\Rental;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
@@ -100,6 +102,7 @@ class AdminController extends Controller
     public function destroyCar($id)
     {
         $car = Car::find($id);
+        $car->rentals()->delete();
         File::delete(public_path() . '/images/cars/' . $car->picture);
         $car->delete();
         return redirect('/admin/cars');
@@ -148,5 +151,29 @@ class AdminController extends Controller
     {
         Location::destroy($id);
         return redirect('/admin/locations');
+    }
+
+    public function formAddRental() {
+        $cars = Car::all();
+        return view('admin.test.addRental', ['cars' => $cars]);
+    }
+
+    public function storeRental(Request $request) {
+        $car = Car::find(intval($request['car']));
+        $rental = new Rental();
+        $rental->from = $this->formatDate($request['start']);
+        $rental->to = $this->formatDate($request['end']);
+        $rental->car_id= intval($request['car']);
+        $rental->user_id = Auth::user()->id;
+        $rental->location_id = $car->location_id;
+        $rental->save();
+        return redirect()->back();
+        //dd($rental);
+    }
+
+    //Change format date dd/mm/yyyy to yyyy/mm/dd
+    private function formatDate($s) {
+        $date = \DateTime::createFromFormat('d/m/Y', $s);
+        return $date->format('Y/m/d');
     }
 }

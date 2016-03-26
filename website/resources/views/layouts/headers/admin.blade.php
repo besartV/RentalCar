@@ -31,6 +31,9 @@
                 <a href="{{ url('/admin/locations') }}"><i class="fa fa-fw fa-location-arrow"></i> Locations</a>
             </li>
             <li>
+                <a href="{{ url('/admin/rental/add') }}"><i class="fa fa-fw fa-location-arrow"></i> Test add Rental</a>
+            </li>
+            <li>
                 <a href="{{ url('/') }}">Original website</a>
             </li>
         </ul>

@@ -25,6 +25,7 @@
 
 use Illuminate\Support\Facades\Response;
 
+//Guest
 Route::group(['middleware' => 'web'], function () {
     //Authentification
     Route::auth();
@@ -37,9 +38,15 @@ Route::group(['middleware' => 'web'], function () {
     //Find route
     Route::get('/find', 'FindController@index');
     Route::post('/find', 'FindController@fetch');
-
 });
 
+//Authentificate
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/find/book/car/{id}/{from}/{to}', 'FindController@book');
+});
+
+
+//Admin
 Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMiddleware', 'web']], function () {
     Route::get('/', 'AdminController@index');
 
@@ -58,6 +65,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['App\Http\Middleware\AdminMi
     Route::get('/location/add', 'AdminController@formAddLocation');
     Route::post('/location/add', 'AdminController@storeLocation');
     Route::get('/location/{id}/delete', 'AdminController@destroyLocation');
+
+    Route::get('/rental/add', 'AdminController@formAddRental');
+    Route::post('/rental/add', 'AdminController@storeRental');
 });
 
 
