@@ -51,7 +51,7 @@ angular.module('rcApp', []).config(function ($interpolateProvider) {
         method: 'GET'
     }).success(function (data) {
         console.log(data);
-        $scope.cities = data;
+        $scope.cities = data.data;
     });
 
     //Get request to get all place form a specific city

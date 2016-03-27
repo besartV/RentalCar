@@ -74,9 +74,10 @@ Route::group(['prefix' => 'api', 'middleware' => 'api'], function() {
 
     Route::get('/cars', 'ApiController@cars');
     Route::get('/find', 'ApiController@find');
+    Route::get('/booking', 'ApiController@booking');
 
     Route::post('/register', 'AuthenticateApiController@register');
-    Route::post('/login', 'AuthenticateApiController@login');
+    Route::get('/login', 'AuthenticateApiController@login');
 });
 
 Route::group(['before' => 'jwt-auth', 'prefix' => 'api'], function () {

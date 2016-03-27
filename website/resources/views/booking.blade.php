@@ -6,7 +6,7 @@
             <div class="col-lg-12">
                 @if(session()->has('book'))
                     <div class="alert alert-dismissible alert-success">
-                        <strong>{{ session()->get('book') }}</strong>.
+                        <strong>{{session()->pull('book', '')}}</strong>.
                     </div>
                 @endif
                 <h1 class="page-header">
@@ -16,8 +16,8 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>To</th>
                         <th>From</th>
+                        <th>To</th>
                         <th>Car</th>
                         <th>Location</th>
                         <th>Price</th>
@@ -39,5 +39,5 @@
             </div>
         </div>
     </section>
-    {{session()->pull('book', '')}}
+
 @endsection
