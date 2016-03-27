@@ -75,6 +75,7 @@ Route::group(['prefix' => 'api', 'middleware' => 'api'], function() {
     Route::get('/cars', 'ApiController@cars');
     Route::get('/find', 'ApiController@find');
     Route::get('/booking', 'ApiController@booking');
+    Route::post('/booked', 'ApiController@booked');
 
     Route::post('/register', 'AuthenticateApiController@register');
     Route::get('/login', 'AuthenticateApiController@login');

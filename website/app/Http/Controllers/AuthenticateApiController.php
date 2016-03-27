@@ -57,8 +57,7 @@ class AuthenticateApiController extends Controller
             // something went wrong whilst attempting to encode the token
             return response()->json(['error' => 'could_not_create_token'], 500);
         }
-
         // all good so return the token
-        return response()->json(compact('token'));
+        return response()->json(['token' => $token, 'user' => User::where('email', '=', $credentials['email'])->get()[0]]);
     }
 }

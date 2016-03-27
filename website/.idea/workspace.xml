@@ -117,18 +117,18 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.041666">
-              <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+            <state vertical-scroll-proportion="-12.916667">
+              <caret line="77" column="15" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.1980197">
-              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding>
                 <element signature="e#40#52#0#PHP" expanded="true" />
               </folding>
@@ -136,11 +136,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AuthenticateApiController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7029703">
+              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.541667">
+              <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="FindController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FindController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.041666">
-              <caret line="85" column="5" selection-start-line="81" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
+            <state vertical-scroll-proportion="-11.791667">
+              <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="28" />
               <folding>
                 <element signature="e#40#52#0#PHP" expanded="true" />
               </folding>
@@ -151,7 +171,7 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.25">
+            <state vertical-scroll-proportion="-22.416666">
               <caret line="42" column="64" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
               <folding>
                 <element signature="e#40#62#0#PHP" expanded="true" />
@@ -181,7 +201,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response15.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response97.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -215,7 +235,6 @@
         <option value="$PROJECT_DIR$/config/jwt.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/appAdmin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/headers/head.blade.php" />
@@ -224,7 +243,6 @@
         <option value="$PROJECT_DIR$/app/Car.php" />
         <option value="$PROJECT_DIR$/app/Rental.php" />
         <option value="$PROJECT_DIR$/app/Location.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/resources/views/find/desc.blade.php" />
         <option value="$PROJECT_DIR$/public/css/app.css" />
@@ -234,9 +252,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/FindController.php" />
         <option value="$PROJECT_DIR$/resources/views/find/find.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/booking.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php" />
       </list>
     </option>
   </component>
@@ -676,6 +696,438 @@
           </option>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/login" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="user@car.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="secret" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booked" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="car_id" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user_id" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booked" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="id_car" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booked" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwODAzMTIsImV4cCI6MTQ1OTA4MzkxMiwibmJmIjoxNDU5MDgwMzEyLCJqdGkiOiJmOWYwMDNmYjI2NzZiZTQ5YzIyNzBhM2QyMTA3MTI2NSJ9.Bb0B3_BkqT3yaOyaQnikn7zfwSExJONrt8lt-pLTwDQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="id_car" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booked" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="id_car" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booking" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="id_car" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booked" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwODAzMTIsImV4cCI6MTQ1OTA4MzkxMiwibmJmIjoxNDU5MDgwMzEyLCJqdGkiOiJmOWYwMDNmYjI2NzZiZTQ5YzIyNzBhM2QyMTA3MTI2NSJ9.Bb0B3_BkqT3yaOyaQnikn7zfwSExJONrt8lt-pLTwDQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booked" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwODAzMTIsImV4cCI6MTQ1OTA4MzkxMiwibmJmIjoxNDU5MDgwMzEyLCJqdGkiOiJmOWYwMDNmYjI2NzZiZTQ5YzIyNzBhM2QyMTA3MTI2NSJ9.Bb0B3_BkqT3yaOyaQnikn7zfwSExJONrt8lt-pLTwDQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="id_car" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
           <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booking" />
           <option name="headers">
             <list>
@@ -693,7 +1145,379 @@
             <list>
               <KeyValuePair>
                 <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwODAzMTIsImV4cCI6MTQ1OTA4MzkxMiwibmJmIjoxNDU5MDgwMzEyLCJqdGkiOiJmOWYwMDNmYjI2NzZiZTQ5YzIyNzBhM2QyMTA3MTI2NSJ9.Bb0B3_BkqT3yaOyaQnikn7zfwSExJONrt8lt-pLTwDQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="id_car" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booked" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwNzg4MTksImV4cCI6MTQ1OTA4MjQxOSwibmJmIjoxNDU5MDc4ODE5LCJqdGkiOiIwZGZhZDBiYmQzNThmYzNlZWU1MjFiMTAzYmQ4NDgzOSJ9.zy7MNNl1e4fTt6SILns7PW17RHoWKeel5lDAlChHXm8" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="id_car" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booked" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
                 <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwNzU1MjAsImV4cCI6MTQ1OTA3OTEyMCwibmJmIjoxNDU5MDc1NTIwLCJqdGkiOiJkYmY5ZDIwYTFiZDU0MzJiOTkyZjRmOTQ5N2MxNzZiZiJ9.ENNGtTU46n-pcP8SYxgIisfq3-L4ozj6xIrY4pEZThY" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="id_car" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booked" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwNzU1MjAsImV4cCI6MTQ1OTA3OTEyMCwibmJmIjoxNDU5MDc1NTIwLCJqdGkiOiJkYmY5ZDIwYTFiZDU0MzJiOTkyZjRmOTQ5N2MxNzZiZiJ9.ENNGtTU46n-pcP8SYxgIisfq3-L4ozj6xIrY4pEZThY" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="from" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="to" />
+                <option name="value" value="27/03/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="id_car" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/find" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwNzU1MjAsImV4cCI6MTQ1OTA3OTEyMCwibmJmIjoxNDU5MDc1NTIwLCJqdGkiOiJkYmY5ZDIwYTFiZDU0MzJiOTkyZjRmOTQ5N2MxNzZiZiJ9.ENNGtTU46n-pcP8SYxgIisfq3-L4ozj6xIrY4pEZThY" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="start" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="end" />
+                <option name="value" value="27/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="city" />
+                <option name="value" value="Lodz" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="place" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/find" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwNzU1MjAsImV4cCI6MTQ1OTA3OTEyMCwibmJmIjoxNDU5MDc1NTIwLCJqdGkiOiJkYmY5ZDIwYTFiZDU0MzJiOTkyZjRmOTQ5N2MxNzZiZiJ9.ENNGtTU46n-pcP8SYxgIisfq3-L4ozj6xIrY4pEZThY" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="start" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="end" />
+                <option name="value" value="27/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="city" />
+                <option name="value" value="Lodz" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="place" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkJkZjJ6dERQVnhLbDFLUUV5R01lb2c9PSIsInZhbHVlIjoiV1c3aFZJdGQzRnFMajNHdlFQZ1wvdDdmTHBQbnFsTmlSamF5bmlGUmk2V2tXUW5Tb1JXVFwvdnZQaDBkMTBcL29tbE1Sb2h4UStWS0F0SEdJd0xRXC9UWDBRPT0iLCJtYWMiOiI3NzEyZGZjYWNlNTcwZDYwMWJlNzRmYWIwNmVmN2ZkNzQwZDAwZTNkZDIzNTIwNTQ5MjFlNzdmZWI5YmFjZDkxIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459083566000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjhpNkluS0lBZVBQdzJ5NEdUc212MUE9PSIsInZhbHVlIjoiRXpsODlLaEUyc29SdkRXcjZFZFpXXC9FbG9MeVErM2VUNVlJT1VubW9pMmYyeHNZdTFsZUNWc1daRCtnMnFNT29aOFhuc3RwbWQ1UTQzVktQN2o5NktnPT0iLCJtYWMiOiI3NzZlN2ZmMzY3ZGExZmFjMzhjNmQzYzIwODlkOWY1Yjg3NmFhMDdkY2Y0MjMzNTI4Njk1MmVjN2JlYzhiZDhiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/find" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwNzU1MjAsImV4cCI6MTQ1OTA3OTEyMCwibmJmIjoxNDU5MDc1NTIwLCJqdGkiOiJkYmY5ZDIwYTFiZDU0MzJiOTkyZjRmOTQ5N2MxNzZiZiJ9.ENNGtTU46n-pcP8SYxgIisfq3-L4ozj6xIrY4pEZThY" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="start" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="end" />
+                <option name="value" value="27/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="city" />
+                <option name="value" value="Lodz" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="place" />
+                <option name="value" value="" />
               </KeyValuePair>
             </list>
           </option>
@@ -722,7 +1546,7 @@
           </option>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost" />
-          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/login" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/find" />
           <option name="headers">
             <list>
               <KeyValuePair>
@@ -738,12 +1562,132 @@
           <option name="parameters">
             <list>
               <KeyValuePair>
-                <option name="key" value="email" />
-                <option name="value" value="user@car.com" />
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwNzU1MjAsImV4cCI6MTQ1OTA3OTEyMCwibmJmIjoxNDU5MDc1NTIwLCJqdGkiOiJkYmY5ZDIwYTFiZDU0MzJiOTkyZjRmOTQ5N2MxNzZiZiJ9.ENNGtTU46n-pcP8SYxgIisfq3-L4ozj6xIrY4pEZThY" />
               </KeyValuePair>
               <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="secret" />
+                <option name="key" value="start" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="end" />
+                <option name="value" value="27/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="city" />
+                <option name="value" value="Lodz" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="place" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IlwvaGNkSW40cW9GajE0WnJVWHJ1UENnPT0iLCJ2YWx1ZSI6IlVPWG9KUnJGTTJyQ3YxQThZOFc3REJoWXVlT0ZsRWZPUkZkeERQaEtUZzJjdDRLVXk2Z083QzZ1aFVHaUxOUDd2RXhQT0RsSkVcL1BcLzR2U1hDblR6Qnc9PSIsIm1hYyI6ImE5ZGU3YmZmMmEyZjZkNDQ4NmI2ZTlmNTM1M2QzN2U3MWM0OTkyZGJlOWI4NzVhMDQ0ODllOTZhY2QzODlmN2MifQ%3D%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InZBQzN2OE1sVnU1Z05sdndsbkNaaEE9PSIsInZhbHVlIjoiQVZ5Q0RHdEZ1cU9RenZRcVNiQkI5V2JuVHdsSDZxcGdTaGJlRWJmU0dnNXRkUVdleTVLYVVqTWxHbU5wV2xmXC93bEdLNCtUbDhnaEpCWUxkMkI2QW1RPT0iLCJtYWMiOiIyYTBmNjk0ZWMwYTA2YWIwM2Q2YzQ3ZWQ0NzkyMTQ3NjA5MWUxZDg5NWQ5NDg1YWUwNDg0MjdjMTNlYTEwMDE0In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/find" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwNzU1MjAsImV4cCI6MTQ1OTA3OTEyMCwibmJmIjoxNDU5MDc1NTIwLCJqdGkiOiJkYmY5ZDIwYTFiZDU0MzJiOTkyZjRmOTQ5N2MxNzZiZiJ9.ENNGtTU46n-pcP8SYxgIisfq3-L4ozj6xIrY4pEZThY" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="start" />
+                <option name="value" value="25/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="end" />
+                <option name="value" value="27/04/2016" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="city" />
+                <option name="value" value="Lodz" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="place" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IlwvaGNkSW40cW9GajE0WnJVWHJ1UENnPT0iLCJ2YWx1ZSI6IlVPWG9KUnJGTTJyQ3YxQThZOFc3REJoWXVlT0ZsRWZPUkZkeERQaEtUZzJjdDRLVXk2Z083QzZ1aFVHaUxOUDd2RXhQT0RsSkVcL1BcLzR2U1hDblR6Qnc9PSIsIm1hYyI6ImE5ZGU3YmZmMmEyZjZkNDQ4NmI2ZTlmNTM1M2QzN2U3MWM0OTkyZGJlOWI4NzVhMDQ0ODllOTZhY2QzODlmN2MifQ%3D%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InZBQzN2OE1sVnU1Z05sdndsbkNaaEE9PSIsInZhbHVlIjoiQVZ5Q0RHdEZ1cU9RenZRcVNiQkI5V2JuVHdsSDZxcGdTaGJlRWJmU0dnNXRkUVdleTVLYVVqTWxHbU5wV2xmXC93bEdLNCtUbDhnaEpCWUxkMkI2QW1RPT0iLCJtYWMiOiIyYTBmNjk0ZWMwYTA2YWIwM2Q2YzQ3ZWQ0NzkyMTQ3NjA5MWUxZDg5NWQ5NDg1YWUwNDg0MjdjMTNlYTEwMDE0In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost" />
+          <option name="urlPath" value="/degree/rentalcarproject/website/public/api/booking" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvZGVncmVlXC9yZW50YWxjYXJwcm9qZWN0XC93ZWJzaXRlXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE0NTkwNzU1MjAsImV4cCI6MTQ1OTA3OTEyMCwibmJmIjoxNDU5MDc1NTIwLCJqdGkiOiJkYmY5ZDIwYTFiZDU0MzJiOTkyZjRmOTQ5N2MxNzZiZiJ9.ENNGtTU46n-pcP8SYxgIisfq3-L4ozj6xIrY4pEZThY" />
               </KeyValuePair>
             </list>
           </option>
@@ -2001,13 +2945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14177693">
@@ -2095,13 +3032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42159384">
-          <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="54" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/locations/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.19280206">
@@ -2113,13 +3043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6066838">
           <caret line="123" column="42" selection-start-line="113" selection-start-column="35" selection-end-line="123" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="27" column="0" selection-start-line="18" selection-start-column="8" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2169,21 +3092,6 @@
         <state vertical-scroll-proportion="0.3084833">
           <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6940874">
-          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="106" column="23" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -2361,9 +3269,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.6435645">
+          <caret line="106" column="23" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.25">
+        <state vertical-scroll-proportion="-22.416666">
           <caret line="42" column="64" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
           <folding>
             <element signature="e#40#62#0#PHP" expanded="true" />
@@ -2371,31 +3287,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.041666">
-          <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FindController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.041666">
-          <caret line="85" column="5" selection-start-line="81" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
+        <state vertical-scroll-proportion="-11.791667">
+          <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="28" />
           <folding>
             <element signature="e#40#52#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.916667">
+          <caret line="77" column="15" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1980197">
-          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
             <element signature="e#40#52#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10891089">
+          <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="54" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.541667">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7029703">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
