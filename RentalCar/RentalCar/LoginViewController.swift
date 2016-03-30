@@ -12,13 +12,15 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var inputEmail: UITextField!
-    
     @IBOutlet weak var inputPassword: UITextField!
+    @IBOutlet weak var signin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.inputEmail.delegate = self
         self.inputPassword.delegate = self
+        
+        self.signin.layer.cornerRadius = 5
     }
     
     override func didReceiveMemoryWarning() {

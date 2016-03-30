@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPassword1: UITextField!
     @IBOutlet weak var inputPassword2: UITextField!
+    @IBOutlet weak var signup: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.inputName.delegate = self
         self.inputPassword1.delegate = self
         self.inputPassword2.delegate = self
+        
+        self.signup.layer.cornerRadius = 5
     }
     
     override func didReceiveMemoryWarning() {
