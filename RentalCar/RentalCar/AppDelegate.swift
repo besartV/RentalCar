@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct Global {
+    static var auth: Bool = false
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
