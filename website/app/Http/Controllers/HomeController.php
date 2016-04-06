@@ -39,8 +39,13 @@ class HomeController extends Controller
             $rentals = Auth::user()->rentals()->get();
 
             foreach($rentals as $rental) {
+                $from = new \DateTime($rental->from);
+                $to = new \DateTime($rental->to);
+                $diff = $from->diff($to);
+
                 $rental->car = $rental->car()->get()[0];
                 $rental->location = $rental->location()->get()[0];
+                $rental->days = $diff->days == 0 ? 1 : $diff->days;
             }
             //dd(session()->has('book'));
             return view('booking', ['rentals' => $rentals]);

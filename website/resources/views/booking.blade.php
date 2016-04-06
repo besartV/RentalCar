@@ -20,7 +20,8 @@
                         <th>To</th>
                         <th>Car</th>
                         <th>Location</th>
-                        <th>Price</th>
+                        <th>Price/Day</th>
+                        <th>Total €</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -32,6 +33,7 @@
                             <td>{{$rental->car['model'] . ' - ' . $rental->car['type']}}</td>
                             <td>{{$rental->location['name'] . ' - ' . $rental->location['city']}}</td>
                             <td>{{$rental->car['rental_price']}}</td>
+                            <td>{{$rental->days * $rental->car['rental_price']}}</td>
                         </tr>
                     @endforeach
                     </tbody>

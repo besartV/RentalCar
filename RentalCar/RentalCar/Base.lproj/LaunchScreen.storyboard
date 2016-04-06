@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +16,77 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car_rc-1" translatesAutoresizingMaskIntoConstraints="NO" id="g65-1h-S4G">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wfo-d6-W7A">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="aM5-HM-XM8"/>
+                                    <constraint firstAttribute="height" constant="125" id="sLz-Fg-Z2Y"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aM5-HM-XM8"/>
+                                        <exclude reference="sLz-Fg-Z2Y"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="aM5-HM-XM8"/>
+                                        <include reference="sLz-Fg-Z2Y"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g65-1h-S4G" firstAttribute="centerX" secondItem="Wfo-d6-W7A" secondAttribute="centerX" id="1Nx-eo-qzm"/>
+                            <constraint firstItem="g65-1h-S4G" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="1fW-Qm-NWw"/>
+                            <constraint firstItem="Wfo-d6-W7A" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="34" id="Gan-PX-aE0"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Wfo-d6-W7A" secondAttribute="bottom" constant="421" id="OUT-bl-d3n"/>
+                            <constraint firstItem="g65-1h-S4G" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="SYa-QZ-Ipe"/>
+                            <constraint firstAttribute="trailing" secondItem="g65-1h-S4G" secondAttribute="trailing" id="kYb-La-cSI"/>
+                            <constraint firstItem="g65-1h-S4G" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="wIT-96-cSE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Wfo-d6-W7A"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1Nx-eo-qzm"/>
+                                <exclude reference="1fW-Qm-NWw"/>
+                                <exclude reference="SYa-QZ-Ipe"/>
+                                <exclude reference="kYb-La-cSI"/>
+                                <exclude reference="wIT-96-cSE"/>
+                                <exclude reference="Gan-PX-aE0"/>
+                                <exclude reference="OUT-bl-d3n"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Wfo-d6-W7A"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1Nx-eo-qzm"/>
+                                <include reference="1fW-Qm-NWw"/>
+                                <include reference="SYa-QZ-Ipe"/>
+                                <include reference="kYb-La-cSI"/>
+                                <include reference="wIT-96-cSE"/>
+                                <include reference="Gan-PX-aE0"/>
+                                <include reference="OUT-bl-d3n"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CircleIcon" width="512" height="512"/>
+        <image name="car_rc-1" width="550" height="960"/>
+    </resources>
 </document>
