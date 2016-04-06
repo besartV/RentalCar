@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -51,7 +52,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             Util.alert(self,title: "Login Failed!", message: "Please put a valid email")
         } else {
             //Request
-            
+            request(.GET, Global.APP_URL + "/login", parameters: ["email": self.inputEmail.text!, "password": self.inputPassword.text!]).responseJSON(completionHandler: { (response) in
+                print("RESPONSE :: \(response)")
+                if response.result.error == nil {
+                    print(response.result.value)
+                } else {
+                    print(response.result.error)
+                }
+            })
         }
     }
     

@@ -9,7 +9,7 @@
 import UIKit
 
 struct Global {
-    static var auth: Bool = false
+    static let APP_URL = "http://projects.yseemonnier.com/rentalcar/api"
 }
 
 @UIApplicationMain
