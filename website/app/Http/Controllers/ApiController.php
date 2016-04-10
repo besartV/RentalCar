@@ -62,7 +62,7 @@ class ApiController extends Controller
                 array_push($res, $car);
         }
 
-        return response()->json(['data' => $res]);
+        return Response::json(['data' => $res]);
     }
 
     /**

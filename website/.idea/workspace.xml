@@ -117,19 +117,31 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.291666">
-              <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+            <state vertical-scroll-proportion="-19.666666">
+              <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthenticateApiController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.76863754">
+              <caret line="146" column="50" selection-start-line="146" selection-start-column="45" selection-end-line="146" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticateApiController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8071979">
-              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="-33.666668">
+              <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+              <folding>
+                <element signature="e#40#53#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,7 +149,7 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-18.666666">
               <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
               <folding />
             </state>
@@ -147,7 +159,7 @@
       <file leaf-file-name="FindController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FindController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-24.916666">
               <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
               <folding />
             </state>
@@ -224,9 +236,7 @@
         <option value="$PROJECT_DIR$/resources/views/find/find.blade.php" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/public/css/fonts/.htaccess" />
@@ -238,6 +248,8 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/headers/head.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/booking.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
       </list>
     </option>
   </component>
@@ -520,8 +532,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -552,6 +564,222 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IlwvaGNkSW40cW9GajE0WnJVWHJ1UENnPT0iLCJ2YWx1ZSI6IlVPWG9KUnJGTTJyQ3YxQThZOFc3REJoWXVlT0ZsRWZPUkZkeERQaEtUZzJjdDRLVXk2Z083QzZ1aFVHaUxOUDd2RXhQT0RsSkVcL1BcLzR2U1hDblR6Qnc9PSIsIm1hYyI6ImE5ZGU3YmZmMmEyZjZkNDQ4NmI2ZTlmNTM1M2QzN2U3MWM0OTkyZGJlOWI4NzVhMDQ0ODllOTZhY2QzODlmN2MifQ%3D%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InZBQzN2OE1sVnU1Z05sdndsbkNaaEE9PSIsInZhbHVlIjoiQVZ5Q0RHdEZ1cU9RenZRcVNiQkI5V2JuVHdsSDZxcGdTaGJlRWJmU0dnNXRkUVdleTVLYVVqTWxHbU5wV2xmXC93bEdLNCtUbDhnaEpCWUxkMkI2QW1RPT0iLCJtYWMiOiIyYTBmNjk0ZWMwYTA2YWIwM2Q2YzQ3ZWQ0NzkyMTQ3NjA5MWUxZDg5NWQ5NDg1YWUwNDg0MjdjMTNlYTEwMDE0In0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459957168000" />
+                <option name="domain" value="projects.yseemonnier.com" />
+                <option name="name" value="300gp" />
+                <option name="path" value="/" />
+                <option name="value" value="R393633712" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459957237000" />
+                <option name="domain" value="projects.yseemonnier.com" />
+                <option name="name" value="300gpBAK" />
+                <option name="path" value="/" />
+                <option name="value" value="R4178755467" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://projects.yseemonnier.com" />
+          <option name="urlPath" value="/rentalcar/api/register" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="ezknzed" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="address" />
+                <option name="value" value="TEst address" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="test@test.fr" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="ab" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IlwvaGNkSW40cW9GajE0WnJVWHJ1UENnPT0iLCJ2YWx1ZSI6IlVPWG9KUnJGTTJyQ3YxQThZOFc3REJoWXVlT0ZsRWZPUkZkeERQaEtUZzJjdDRLVXk2Z083QzZ1aFVHaUxOUDd2RXhQT0RsSkVcL1BcLzR2U1hDblR6Qnc9PSIsIm1hYyI6ImE5ZGU3YmZmMmEyZjZkNDQ4NmI2ZTlmNTM1M2QzN2U3MWM0OTkyZGJlOWI4NzVhMDQ0ODllOTZhY2QzODlmN2MifQ%3D%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InZBQzN2OE1sVnU1Z05sdndsbkNaaEE9PSIsInZhbHVlIjoiQVZ5Q0RHdEZ1cU9RenZRcVNiQkI5V2JuVHdsSDZxcGdTaGJlRWJmU0dnNXRkUVdleTVLYVVqTWxHbU5wV2xmXC93bEdLNCtUbDhnaEpCWUxkMkI2QW1RPT0iLCJtYWMiOiIyYTBmNjk0ZWMwYTA2YWIwM2Q2YzQ3ZWQ0NzkyMTQ3NjA5MWUxZDg5NWQ5NDg1YWUwNDg0MjdjMTNlYTEwMDE0In0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459957263000" />
+                <option name="domain" value="projects.yseemonnier.com" />
+                <option name="name" value="300gp" />
+                <option name="path" value="/" />
+                <option name="value" value="R393633712" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459957237000" />
+                <option name="domain" value="projects.yseemonnier.com" />
+                <option name="name" value="300gpBAK" />
+                <option name="path" value="/" />
+                <option name="value" value="R4178755467" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://projects.yseemonnier.com" />
+          <option name="urlPath" value="/rentalcar/api/register" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="ezknzed" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="address" />
+                <option name="value" value="TEst address" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="test@test.fr" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="ab" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IlwvaGNkSW40cW9GajE0WnJVWHJ1UENnPT0iLCJ2YWx1ZSI6IlVPWG9KUnJGTTJyQ3YxQThZOFc3REJoWXVlT0ZsRWZPUkZkeERQaEtUZzJjdDRLVXk2Z083QzZ1aFVHaUxOUDd2RXhQT0RsSkVcL1BcLzR2U1hDblR6Qnc9PSIsIm1hYyI6ImE5ZGU3YmZmMmEyZjZkNDQ4NmI2ZTlmNTM1M2QzN2U3MWM0OTkyZGJlOWI4NzVhMDQ0ODllOTZhY2QzODlmN2MifQ%3D%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1458689571000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InZBQzN2OE1sVnU1Z05sdndsbkNaaEE9PSIsInZhbHVlIjoiQVZ5Q0RHdEZ1cU9RenZRcVNiQkI5V2JuVHdsSDZxcGdTaGJlRWJmU0dnNXRkUVdleTVLYVVqTWxHbU5wV2xmXC93bEdLNCtUbDhnaEpCWUxkMkI2QW1RPT0iLCJtYWMiOiIyYTBmNjk0ZWMwYTA2YWIwM2Q2YzQ3ZWQ0NzkyMTQ3NjA5MWUxZDg5NWQ5NDg1YWUwNDg0MjdjMTNlYTEwMDE0In0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459351695000" />
+                <option name="domain" value="projects.yseemonnier.com" />
+                <option name="name" value="300gp" />
+                <option name="path" value="/" />
+                <option name="value" value="R2225857655" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1459351579000" />
+                <option name="domain" value="projects.yseemonnier.com" />
+                <option name="name" value="300gpBAK" />
+                <option name="path" value="/" />
+                <option name="value" value="R4178759823" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://projects.yseemonnier.com" />
+          <option name="urlPath" value="/rentalcar/api/register" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="ezknzed" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="address" />
+                <option name="value" value="TEst address" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="test@test.fr" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="ab" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -3087,7 +3315,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26037195" sideWeight="0.49518073" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26752505" sideWeight="0.49518073" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3145,58 +3373,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://DATABASE/8efcc54a-b998-42d7-a442-4ac4eadaba19">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>8efcc54a-b998-42d7-a442-4ac4eadaba19</OriginalElement>
-          <nodes>
-            <node x="130.25" y="0.0">8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.locations</node>
-            <node x="742.0" y="0.0">8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.password_resets</node>
-            <node x="577.214193548387" y="311.0">8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.users</node>
-            <node x="-104.70193548387098" y="782.0090322580645">8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.migrations</node>
-            <node x="223.28193548387094" y="661.8864516129032">8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.rentals</node>
-            <node x="-103.45548387096774" y="279.24645161290323">8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.cars</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.rentals" target="8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.users">
-              <point x="96.0" y="-103.0" />
-              <point x="474.5" y="597.0" />
-              <point x="543.0" y="597.0" />
-              <point x="0.0" y="114.0" />
-            </edge>
-            <edge source="8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.rentals" target="8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.cars">
-              <point x="-96.0" y="-103.0" />
-              <point x="282.5" y="597.0" />
-              <point x="184.0" y="597.0" />
-              <point x="0.0" y="147.0" />
-            </edge>
-            <edge source="8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.rentals" target="8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.locations">
-              <point x="0.0" y="-103.0" />
-              <point x="378.5" y="253.0" />
-              <point x="361.25" y="253.0" />
-              <point x="77.0" y="114.0" />
-            </edge>
-            <edge source="8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.cars" target="8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.locations">
-              <point x="0.0" y="-147.0" />
-              <point x="184.0" y="253.0" />
-              <point x="207.25" y="253.0" />
-              <point x="-77.0" y="114.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.8022774327122153" x="194.0" y="249.0" />
-          <SelectedNodes>
-            <node>8efcc54a-b998-42d7-a442-4ac4eadaba19.table:rentalcar.migrations</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/locations/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.19280206">
@@ -3226,14 +3402,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/74ff6f7f/8efcc54a-b998-42d7-a442-4ac4eadaba19/rentalcar..cars">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3339,7 +3515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47630924">
           <caret line="225" column="16" selection-start-line="225" selection-start-column="16" selection-end-line="225" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3403,13 +3578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1089108">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3513,27 +3681,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FindController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/booking.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6748072">
           <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3541,25 +3692,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6722365">
           <caret line="70" column="93" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Validator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13496144">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-33.666668">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FindController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.916666">
+          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.666666">
+          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.291666">
-          <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+        <state vertical-scroll-proportion="-19.666666">
+          <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticateApiController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8071979">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.76863754">
+          <caret line="146" column="50" selection-start-line="146" selection-start-column="45" selection-end-line="146" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

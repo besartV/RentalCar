@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -18,8 +19,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.signin.layer.cornerRadius = 0
         self.inputEmail.delegate = self
         self.inputPassword.delegate = self
+        
+        self.inputEmail.text = "user@car.com"
+        self.inputPassword.text = "secret"
         
         self.signin.layer.cornerRadius = 5
     }
@@ -46,20 +51,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signIn(sender: AnyObject) {
         print("Sign In Button")
-        if self.inputEmail.text == "" || self.inputPassword.text == "" {
-            Util.alert(self,title: "Login Failed!", message: "Please put all information")
-        } else if !self.isValidEmail(self.inputEmail.text!) {
-            Util.alert(self,title: "Login Failed!", message: "Please put a valid email")
-        } else {
-            //Request
-            request(.GET, Global.APP_URL + "/login", parameters: ["email": self.inputEmail.text!, "password": self.inputPassword.text!]).responseJSON(completionHandler: { (response) in
-                print("RESPONSE :: \(response)")
-                if response.result.error == nil {
-                    print(response.result.value)
-                } else {
-                    print(response.result.error)
-                }
-            })
+        autoreleasepool { 
+            if self.inputEmail.text == "" || self.inputPassword.text == "" {
+                Util.alert(self,title: "Login Failed!", message: "Please put all information")
+            } else if !self.isValidEmail(self.inputEmail.text!) {
+                Util.alert(self,title: "Login Failed!", message: "Please put a valid email")
+            } else {
+                let vc = ProgressViewController()
+                vc.setLabelActivity("Checking information...")
+                vc.showActivityIndicator(self.view)
+                request(.GET, Global.APP_URL + "/login", parameters: ["email": self.inputEmail.text!, "password": self.inputPassword.text!]).responseJSON(completionHandler: { (response) in
+                    print("RESPONSE :: \(response)")
+                    vc.hideActivityIndicator()
+                    if response.result.error == nil {
+                        print(response.result.value)
+                        if response.response?.statusCode == 200 {
+                            let json = JSON(response.result.value!)
+                            print("JSON :::::: \(json)")
+                            Global.token = json["token"].stringValue
+                            self.performSegueWithIdentifier("AppSegue", sender: nil)
+                        } else {
+                            Util.alert(self, title: "Sign in", message: response.result.value!["error"] as! String)
+                        }
+                    } else {
+                        Util.alert(self, title: "Sign in", message: response.result.error!.debugDescription)
+                    }
+                })
+            }
         }
     }
     

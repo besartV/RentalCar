@@ -23,8 +23,13 @@ class AuthenticateApiController extends Controller
             'address' => 'required|max:255',
         ]);
 
-        if ($validator->fails())
-            return Response::json(['error' => $validator->errors()], 400);
+        if ($validator->fails()){
+            $s = "";
+            foreach($validator->errors()->all() as $error)
+                $s .= $error . " \n";
+            return Response::json(['error' => $s], 400);
+        }
+
 
         try {
             $user = User::create([
@@ -35,7 +40,7 @@ class AuthenticateApiController extends Controller
                 'address' => $request['address'],
             ]);
         } catch (Exception $e) {
-            return Response::json(['error' => 'User already exists.'], 401);
+            return Response::json(['error' => 'User already exists.'], 400);
         }
 
         $token = JWTAuth::fromUser($user);
@@ -51,11 +56,14 @@ class AuthenticateApiController extends Controller
         try {
             // attempt to verify the credentials and create a token for the user
             if (!$token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'invalid_credentials'], 401);
+
+
+
+                return response()->json(['error' => 'invalid credentials'], 400);
             }
         } catch (JWTException $e) {
             // something went wrong whilst attempting to encode the token
-            return response()->json(['error' => 'could_not_create_token'], 500);
+            return response()->json(['error' => 'could not create token'], 400);
         }
         // all good so return the token
         return response()->json(['token' => $token, 'user' => User::where('email', '=', $credentials['email'])->get()[0]]);

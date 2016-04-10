@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car_rc-1" translatesAutoresizingMaskIntoConstraints="NO" id="g65-1h-S4G">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="car_rc-1" translatesAutoresizingMaskIntoConstraints="NO" id="g65-1h-S4G">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wfo-d6-W7A">
@@ -55,12 +55,12 @@
                                 <exclude reference="Wfo-d6-W7A"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Gan-PX-aE0"/>
                                 <exclude reference="1Nx-eo-qzm"/>
                                 <exclude reference="1fW-Qm-NWw"/>
                                 <exclude reference="SYa-QZ-Ipe"/>
                                 <exclude reference="kYb-La-cSI"/>
                                 <exclude reference="wIT-96-cSE"/>
-                                <exclude reference="Gan-PX-aE0"/>
                                 <exclude reference="OUT-bl-d3n"/>
                             </mask>
                         </variation>
@@ -69,12 +69,12 @@
                                 <include reference="Wfo-d6-W7A"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Gan-PX-aE0"/>
                                 <include reference="1Nx-eo-qzm"/>
                                 <include reference="1fW-Qm-NWw"/>
                                 <include reference="SYa-QZ-Ipe"/>
                                 <include reference="kYb-La-cSI"/>
                                 <include reference="wIT-96-cSE"/>
-                                <include reference="Gan-PX-aE0"/>
                                 <include reference="OUT-bl-d3n"/>
                             </mask>
                         </variation>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4800DB631CA81A8C003D399D /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4800DB621CA81A8C003D399D /* Util.swift */; };
+		4804C66A1CB5278B00BF4677 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4804C6691CB5278B00BF4677 /* ProgressViewController.swift */; };
 		4875DE3B1CA947D000ADEBE2 /* UserPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4875DE3A1CA947D000ADEBE2 /* UserPopoverViewController.swift */; };
 		4875DE3D1CA9567000ADEBE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4875DE3C1CA9567000ADEBE2 /* LoginViewController.swift */; };
 		4875DE3F1CA96D7E00ADEBE2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4875DE3E1CA96D7E00ADEBE2 /* RegisterViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		4800DB621CA81A8C003D399D /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		4804C6691CB5278B00BF4677 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		4875DE3A1CA947D000ADEBE2 /* UserPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPopoverViewController.swift; sourceTree = "<group>"; };
 		4875DE3C1CA9567000ADEBE2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4875DE3E1CA96D7E00ADEBE2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				48B8C7C31CA20CDA001174E3 /* Assets.xcassets */,
 				48B8C7C51CA20CDA001174E3 /* LaunchScreen.storyboard */,
 				48B8C7C81CA20CDA001174E3 /* Info.plist */,
+				4804C6691CB5278B00BF4677 /* ProgressViewController.swift */,
 			);
 			path = RentalCar;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				4800DB631CA81A8C003D399D /* Util.swift in Sources */,
 				48B8C7BD1CA20CDA001174E3 /* AppDelegate.swift in Sources */,
 				4875DE3D1CA9567000ADEBE2 /* LoginViewController.swift in Sources */,
+				4804C66A1CB5278B00BF4677 /* ProgressViewController.swift in Sources */,
 				48B8C7D31CA20D2D001174E3 /* SWRevealViewController.m in Sources */,
 				48B8C7D91CA21728001174E3 /* HomeViewController.swift in Sources */,
 			);

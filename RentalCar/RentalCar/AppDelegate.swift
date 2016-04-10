@@ -9,7 +9,8 @@
 import UIKit
 
 struct Global {
-    static let APP_URL = "http://projects.yseemonnier.com/rentalcar/api"
+    static let APP_URL: String = "http://projects.yseemonnier.com/rentalcar/api"
+    static var token: String = ""
 }
 
 @UIApplicationMain
