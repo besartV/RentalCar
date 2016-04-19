@@ -1863,6 +1863,9 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SVd-1N-IED" kind="show" id="1nH-gJ-x0T"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="R5A-tc-tVI">
                                         <rect key="frame" x="0.0" y="44" width="200" height="44"/>
@@ -1919,7 +1922,40 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYf-90-ofv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1273.5" y="-1123.5"/>
+            <point key="canvasLocation" x="-1641" y="-1003.5"/>
+        </scene>
+        <!--Booking-->
+        <scene sceneID="4fQ-dn-D2v">
+            <objects>
+                <tableViewController id="d8z-wh-XAa" customClass="BookingViewController" customModule="RentalCar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" sectionHeaderHeight="28" sectionFooterHeight="28" id="nb5-Fq-h6N">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingCell" rowHeight="35" id="Y3h-l4-x0Y" customClass="BookingCellViewController" customModule="RentalCar" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y3h-l4-x0Y" id="P7t-pt-Oak">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="d8z-wh-XAa" id="cEP-9R-bEy"/>
+                            <outlet property="delegate" destination="d8z-wh-XAa" id="doQ-ds-QgK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Booking" prompt="RentalCar" id="z2f-ow-ohl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="CHf-o8-RIe">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButton:" destination="d8z-wh-XAa" id="odc-MA-QTa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqW-db-7dL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="-1296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2zO-2e-miX">
@@ -1949,7 +1985,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.32156862749999998" green="0.53725490200000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.32156862745098036" green="0.53725490196078429" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.32156862749999998" green="0.53725490200000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -2245,6 +2281,28 @@
             </objects>
             <point key="canvasLocation" x="3619.5" y="500"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N95-3h-xBo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SVd-1N-IED" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DJh-1o-ybs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.32156862749999998" green="0.53725490200000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.32156862749999998" green="0.53725490200000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="d8z-wh-XAa" kind="relationship" relationship="rootViewController" id="8F4-xf-IzG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UTf-sW-sAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729" y="-1296"/>
+        </scene>
     </scenes>
     <resources>
         <image name="calendar" width="672" height="372"/>
@@ -2263,7 +2321,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="5vd-Of-hJb"/>
         <segue reference="1h9-9d-cw1"/>
-        <segue reference="6yI-ul-jdd"/>
         <segue reference="ncT-cQ-hfl"/>
+        <segue reference="ph5-zS-CDw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -56,12 +56,18 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     let placesPickerView = UIPickerView()
     
     //Data
+    var activeTextField:UITextField?
     var cities: [String] = []
     var places: [(Int,String)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
+        
+        //Texfield
+        self.city.delegate = self
+        self.place.delegate = self
+        
         //UIPickerView
         self.initCitiesPickerView()
         self.initPlacesPickerView()
@@ -129,6 +135,14 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
          }*/
         return true
     }
+    
+    //MARK: Textfield
+    
+    func textFieldDidBeginEditing(textField: UITextField) { // became first responder
+        self.activeTextField = textField
+    }
+    
+    //MARK: Segue
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("SEGUE")
@@ -214,12 +228,12 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     //MARK: UIPickerView
     
     private func initCitiesPickerView() {
-        
         self.citiesPickerView.backgroundColor = Util.UIColorFromHex(0xFFFFFF)
+
         let toolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 44))
         var items = [UIBarButtonItem]()
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let doneButton: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: Selector(self.donePressed()))
+        let doneButton: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FindViewController.donePressed))
         
         items.append(spaceButton)
         items.append(spaceButton)
@@ -227,6 +241,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         toolbar.barStyle = UIBarStyle.Black
         toolbar.barTintColor = Util.UIColorFromHex(0x4E83AA)
         toolbar.setItems(items, animated: true)
+        toolbar.userInteractionEnabled = true
         
         self.citiesPickerView.delegate = self
         self.citiesPickerView.dataSource = self
@@ -240,7 +255,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         let toolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 44))
         var items = [UIBarButtonItem]()
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let doneButton: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: Selector(self.donePressed()))
+        let doneButton: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FindViewController.donePressed))
         
         items.append(spaceButton)
         items.append(spaceButton)
@@ -248,6 +263,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         toolbar.barStyle = UIBarStyle.Black
         toolbar.barTintColor = Util.UIColorFromHex(0x4E83AA)
         toolbar.setItems(items, animated: true)
+        toolbar.userInteractionEnabled = true
         
         self.placesPickerView.delegate = self
         self.placesPickerView.dataSource = self
@@ -258,7 +274,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     
     func donePressed() {
         print("TEST DONEPRESED")
-        self.city.resignFirstResponder()
+        self.activeTextField?.resignFirstResponder()
     }
     
     //MARK: UIPickerView delegate
@@ -308,6 +324,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
                             let json: JSON = JSON(response.result.value!)
                             let data = json["data"].dictionaryValue
                             print(data)
+                            self.places.append((-1,""))
                             for (id, place) in data {
                                 print(place)
                                 self.places.append((Int(id)!,place.stringValue))
@@ -333,9 +350,6 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     @IBAction func searchAction(sender: AnyObject) {
         autoreleasepool {
             if self.city.text != "" && self.place.text  != "" {
-                let pvc: ProgressViewController = ProgressViewController()
-                pvc.setLabelActivity("Searching...")
-                pvc.showActivityIndicator(self.view)
                 if Util.isConnectedToNetwork() {
                     if let idPlace = self.places.indexOf({$0.1 == self.place.text!}) {
                         //let id = self.places[found]
@@ -349,12 +363,16 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
                             "city": self.city.text!,
                             "place": self.places[idPlace].0
                             ], headers: ["X-CSRF-TOKEN": Global.token]).responseJSON(completionHandler: { (response) in
-                                
+                                pvc.hideActivityIndicator()
                                 print(response)
                                 if response.response?.statusCode == 200 {
                                     self.cars = []
                                     let json: JSON = JSON(response.result.value!)
                                     print("JSON :: \n\(json)")
+                                    if (json["data"].array!).isEmpty {
+                                        Util.alert(self, title: "Search for a car", message: "Sorry, there are no cars for this places...")
+                                        return 
+                                    }
                                     for car in json["data"].array! {
                                         print("CAR :: \(car)")
                                         let id: Int = car["id"].int!
@@ -369,20 +387,17 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
                                         let location_id: Int = Int(car["location_id"].string!)!
                                         self.cars.append(Car(id: id, model: model, type: type, description: description, color: color, fuel: fuel, sits: sits, price: price, picture: picture, loc_id: location_id))
                                     }
-                                    pvc.hideActivityIndicator()
                                     self.performSegueWithIdentifier("ResultSegue", sender: self)
                                 } else {
                                     Util.alert(self, title: "Search", message: response.result.error!.debugDescription)
                                 }
-                                pvc.hideActivityIndicator()
                             })
                     }
                 } else {
-                    pvc.hideActivityIndicator()
                     Util.alert(self, title: "Internet Network", message: "Please turn on your 3G or WIFI")
                 }
             } else {
-                Util.alert(self,title: "Login Failed!", message: "Please put all information")
+                Util.alert(self,title: "Search for a car", message: "Please put all information")
             }
             
         }
@@ -445,7 +460,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
                 let json: JSON = JSON(response.result.value!)
                 let data = json["data"].array
                 print(data)
-                
+                self.cities.append("")
                 for city in data! {
                     print(city)
                     self.cities.append(city.string!)

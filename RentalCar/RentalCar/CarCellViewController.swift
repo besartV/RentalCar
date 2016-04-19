@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Alamofire
+import QuartzCore
 
 class CarCellViewController: UITableViewCell {
     
@@ -31,9 +32,10 @@ class CarCellViewController: UITableViewCell {
     
     func downloadImage() {
         let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+        activityIndicator.layer.zPosition = 1000
         activityIndicator.frame = CGRectMake(0.0, 0.0, 20.0, 20.0);
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
-        activityIndicator.center = CGPointMake(self.picture.frame.size.width / 2, self.picture.frame.size.height / 2);
+        activityIndicator.center = self.picture.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
         self.addSubview(activityIndicator)
