@@ -19,7 +19,7 @@
                                     <h3 class="panel-title">{{ $car->model . ' - ' . $car->type }}</h3>
                                 </div>
                                 <div class="panel-body">
-                                    <img class="img-responsive" src="{{ url('/') . '/images/cars/' . $car->picture }}"
+                                    <img class="img-responsive" src="{{ url('/') . '/public/images/cars/' . $car->picture }}"
                                          alt="">
 
                                     <p><strong>{{ $car->sits }} sits</strong></p>
@@ -27,7 +27,7 @@
                                     <p><strong>{{ $car->fuel }}</strong></p>
 
                                     <span class="price pull-right card"><strong>{{ $car->rental_price }}
-                                            €</strong></span>
+                                            <i class="fa fa-eur" aria-hidden="true"></i></strong></span>
                                 </div>
                             </div>
                             <!-- The Modal -->
@@ -53,7 +53,7 @@
 
                                         <p>Sits: {{ $car->sits }}</p>
 
-                                        <p>Price/Day: {{ $car->rental_price }}€</p>
+                                        <p>Price/Day: {{ $car->rental_price }}<i class="fa fa-eur" aria-hidden="true"></i></p>
                                     </div>
                                     <div class="modal-footer">
                                         <a href="{{ url('/find/book/car/') . '/'. $car->id . '/' . $dates['from'] . '/' . $dates['to']}}"

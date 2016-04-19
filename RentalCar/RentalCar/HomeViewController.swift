@@ -18,8 +18,8 @@ class HomeViewController: UITableViewController, UIPopoverPresentationController
         super.viewDidLoad()
         
         if revealViewController() != nil {
-            menu.target = revealViewController()
-            menu.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.menu.target = revealViewController()
+            self.menu.action = #selector(SWRevealViewController.revealToggle(_:))
             
             revealViewController().rightViewRevealWidth = 150
             

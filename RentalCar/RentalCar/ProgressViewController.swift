@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import QuartzCore
 
 class ProgressViewController {
     
@@ -26,6 +27,7 @@ class ProgressViewController {
         container.frame = uiView.frame
         container.center = uiView.center
         container.backgroundColor = Util.UIColorFromHex(0xffffff, alpha: 0.3)
+        container.layer.zPosition = 1000
         
         loadingView.frame = CGRectMake(0, 0, 240, 150)
         loadingView.center = CGPoint(x: uiView.frame.width/2, y: uiView.frame.height/3)
@@ -38,7 +40,7 @@ class ProgressViewController {
         activityIndicator.center = CGPointMake(loadingView.frame.size.width / 2, loadingView.frame.size.height / 2);
         activityIndicator.transform = CGAffineTransformMakeScale(1.3, 1.3);
         
-        labelInfo.frame = CGRectMake(0.0, 0.0, loadingView.frame.size.width, 20.0);
+        labelInfo.frame = CGRectMake(0.0, 0.0, loadingView.frame.size.width, 25.0);
         labelInfo.center = CGPointMake(loadingView.frame.size.width / 2, loadingView.frame.size.height/1.2);
         labelInfo.textAlignment = NSTextAlignment.Center
         labelInfo.font = UIFont.boldSystemFontOfSize(20.0)

@@ -10,6 +10,7 @@ import UIKit
 
 struct Global {
     static let APP_URL: String = "http://projects.yseemonnier.com/rentalcar/api"
+    static let APP_STORAGE: String = "http://projects.yseemonnier.com/rentalcar/public/images/cars"
     static var token: String = ""
 }
 

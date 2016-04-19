@@ -33,7 +33,7 @@
                                     <tr>
                                         <td>{{$car->id}}</td>
                                         <td> <a href=" {{ url('/admin/car/'. $car->id) }}"><img style="height: 100px; width: 200px;;"
-                                                 src="{{ url('/') . '/images/cars/' . $car->picture }}"
+                                                 src="{{ url('/') . '/public/images/cars/' . $car->picture }}"
                                                  alt="car {{$car->picture}}"></a></td>
                                         <td>{{$car->model}}</td>
                                         <td>{{$car->type}}</td>

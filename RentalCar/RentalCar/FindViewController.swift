@@ -11,9 +11,32 @@ import Alamofire
 import SwiftyJSON
 import EPCalendarPicker
 
-class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, EPCalendarPickerDelegate {
+public func ==(lhs: NSDate, rhs: NSDate) -> Bool {
+    return lhs === rhs || lhs.compare(rhs) == .OrderedSame
+}
+
+public func <(lhs: NSDate, rhs: NSDate) -> Bool {
+    return lhs.compare(rhs) == .OrderedAscending
+}
+
+extension NSDate: Comparable {
+    func addDays(days:Int) -> NSDate{
+        let newDate = NSCalendar.currentCalendar().dateByAddingUnit(
+            .Day,
+            value: days,
+            toDate: self,
+            options: NSCalendarOptions(rawValue: 0))
+        
+        return newDate!
+    }
+}
+
+class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, EPCalendarPickerDelegate, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var menu: UIBarButtonItem!
+    
+    //Segue
+    var cars: [Car] = []
     
     //Dates
     var fromCalendarPicker: EPCalendarPicker!
@@ -32,6 +55,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     let citiesPickerView = UIPickerView()
     let placesPickerView = UIPickerView()
     
+    //Data
     var cities: [String] = []
     var places: [(Int,String)] = []
     
@@ -69,6 +93,8 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         }
         
         self.navigationController!.navigationBar.barTintColor = Util.UIColorFromHex(0x4E83AA)
+        
+        print("TEST DATE ::::: \(self.dateFrom)")
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -104,9 +130,18 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         return true
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("SEGUE")
+        if segue.identifier == "ResultSegue" {
+            print("SEGUE11\n\(segue.destinationViewController)")
+            let destinationVC = segue.destinationViewController as! ResultViewController
+            destinationVC.cars = self.cars
+        }
+    }
+    
     //MARK: UICalendarPicker
     func dateFromGesture(sender: UITapGestureRecognizer) {
-        self.fromCalendarPicker = EPCalendarPicker(startYear: 2016, endYear: 2017, multiSelection: false, selectedDates: [])
+        self.fromCalendarPicker = EPCalendarPicker(startYear: 2015, endYear: 2017, multiSelection: false, selectedDates: [])
         self.fromCalendarPicker.calendarDelegate = self
         self.fromCalendarPicker.startDate = self.dateFrom
         self.fromCalendarPicker.hightlightsToday = true
@@ -146,6 +181,13 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
             subviews[0].text = self.extractDay(date)
             subviews[1].text = self.formatteDate(date)
             self.dateFrom = date
+            
+            if self.dateTo <= self.dateFrom {
+                self.dateTo = self.dateFrom.addDays(2)
+                let subviews = self.dateToView.subviews.flatMap { $0 as? UILabel }
+                subviews[0].text = self.extractDay(self.dateTo)
+                subviews[1].text = self.formatteDate(self.dateTo)
+            }
             break
         case self.toCalendarPicker:
             let subviews = self.dateToView.subviews.flatMap { $0 as? UILabel }
@@ -247,50 +289,124 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        switch pickerView {
-        case self.citiesPickerView:
-            self.city.text = self.cities[row]
-            print("pick this... " + self.cities[row])
-            self.places.removeAll()
-            request(.GET, Global.APP_URL + "/findPlaces/" + self.cities[row]).responseJSON(completionHandler: { (response) in
-                print(response)
-                let json: JSON = JSON(response.result.value!)
-                let data = json["data"].dictionaryValue
-                print(data)
-                for (id, place) in data {
-                    print(place)
-                    self.places.append((Int(id)!,place.stringValue))
-                    //self.places.append(place.string!)
+        autoreleasepool {
+            
+            if Util.isConnectedToNetwork() {
+                switch pickerView {
+                case self.citiesPickerView:
+                    let pvc: ProgressViewController = ProgressViewController()
+                    pvc.setLabelActivity("Fetching places...")
+                    pvc.showActivityIndicator(self.view)
+                    self.city.text = self.cities[row]
+                    print("pick this... " + self.cities[row])
+                    self.places.removeAll()
+                    request(.GET, Global.APP_URL + "/findPlaces/" + self.cities[row]).responseJSON(completionHandler: { (response) in
+                        print(response)
+                        pvc.hideActivityIndicator()
+                        if response.response?.statusCode == 200 {
+                            self.places.removeAll()
+                            let json: JSON = JSON(response.result.value!)
+                            let data = json["data"].dictionaryValue
+                            print(data)
+                            for (id, place) in data {
+                                print(place)
+                                self.places.append((Int(id)!,place.stringValue))
+                                //self.places.append(place.string!)
+                            }
+                            pvc.hideActivityIndicator()
+                            print(self.places)
+                        }
+                    })
+                case self.placesPickerView:
+                    self.place.text = self.places[row].1
+                default:
+                    return
                 }
-                print(self.places)
-            })
-        case self.placesPickerView:
-            self.place.text = self.places[row].1
-        default:
-            return
+            } else {
+                Util.alert(self, title: "Internet Network", message: "Please turn on your 3G or WIFI")
+            }
         }
     }
     
     //MARK: SEARCH
     
     @IBAction func searchAction(sender: AnyObject) {
-        if self.city.text != "" && self.place.text  != "" {
-            if let idPlace = self.places.indexOf({$0.1 == self.place.text!}) {
-                //let id = self.places[found]
-                print("SEARCH...\n\(self.formatteDateParams(self.dateFrom))\n\(self.formatteDateParams(self.dateTo))\n\(self.city.text!)\n\(idPlace)")
-                request(.GET, Global.APP_URL + "/find", parameters: [
-                    "start" : self.formatteDateParams(self.dateFrom),
-                    "end": self.formatteDateParams(self.dateTo),
-                    "city": self.city.text!,
-                    "place": idPlace
-                    ], headers: ["X-CSRF-TOKEN": Global.token]).responseJSON(completionHandler: { (response) in
-                        //Todo....
-                        print(response)
-                    })
+        autoreleasepool {
+            if self.city.text != "" && self.place.text  != "" {
+                let pvc: ProgressViewController = ProgressViewController()
+                pvc.setLabelActivity("Searching...")
+                pvc.showActivityIndicator(self.view)
+                if Util.isConnectedToNetwork() {
+                    if let idPlace = self.places.indexOf({$0.1 == self.place.text!}) {
+                        //let id = self.places[found]
+                        print("SEARCH...\n\(self.formatteDateParams(self.dateFrom))\n\(self.formatteDateParams(self.dateTo))\n\(self.city.text!)\n\(self.places[idPlace].0)")
+                        let pvc: ProgressViewController = ProgressViewController()
+                        pvc.showActivityIndicator(self.view)
+                        pvc.setLabelActivity("Searching...")
+                        request(.GET, Global.APP_URL + "/find", parameters: [
+                            "start" : self.formatteDateParams(self.dateFrom),
+                            "end": self.formatteDateParams(self.dateTo),
+                            "city": self.city.text!,
+                            "place": self.places[idPlace].0
+                            ], headers: ["X-CSRF-TOKEN": Global.token]).responseJSON(completionHandler: { (response) in
+                                
+                                print(response)
+                                if response.response?.statusCode == 200 {
+                                    self.cars = []
+                                    let json: JSON = JSON(response.result.value!)
+                                    print("JSON :: \n\(json)")
+                                    for car in json["data"].array! {
+                                        print("CAR :: \(car)")
+                                        let id: Int = car["id"].int!
+                                        let model: String = car["model"].string!
+                                        let type: String = car["type"].string!
+                                        let sits: Int = Int(car["sits"].string!)!
+                                        let fuel: String = car["fuel"].string!
+                                        let color: String = car["color"].string!
+                                        let description: String = car["description"].string!
+                                        let price: Double = Double(car["rental_price"].string!)!
+                                        let picture: String = car["picture"].string!
+                                        let location_id: Int = Int(car["location_id"].string!)!
+                                        self.cars.append(Car(id: id, model: model, type: type, description: description, color: color, fuel: fuel, sits: sits, price: price, picture: picture, loc_id: location_id))
+                                    }
+                                    pvc.hideActivityIndicator()
+                                    self.performSegueWithIdentifier("ResultSegue", sender: self)
+                                } else {
+                                    Util.alert(self, title: "Search", message: response.result.error!.debugDescription)
+                                }
+                                pvc.hideActivityIndicator()
+                            })
+                    }
+                } else {
+                    pvc.hideActivityIndicator()
+                    Util.alert(self, title: "Internet Network", message: "Please turn on your 3G or WIFI")
+                }
+            } else {
+                Util.alert(self,title: "Login Failed!", message: "Please put all information")
             }
-        } else {
-            Util.alert(self,title: "Login Failed!", message: "Please put all information")
+            
         }
+    }
+    
+    //MARK: Menu
+    
+    @IBAction func menuAction(sender: AnyObject) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let userMenuViewController: UserPopoverViewController = storyboard.instantiateViewControllerWithIdentifier("UserPopover") as! UserPopoverViewController
+        
+        userMenuViewController.modalPresentationStyle = .Popover
+        
+        let popoverMenuViewController = userMenuViewController.popoverPresentationController
+        popoverMenuViewController?.permittedArrowDirections = .Any
+        popoverMenuViewController?.delegate = self
+        popoverMenuViewController?.barButtonItem = sender as! UIBarButtonItem
+        
+        self.presentViewController(userMenuViewController, animated: true, completion: nil)
+    }
+    
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle{
+        return .None
     }
     
     //MARK: NSDate util
@@ -317,18 +433,29 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         return formatter.stringFromDate(date);
     }
     
-    //Mark: Util
+    //MARK: Util
     private func loadData() {
-        request(.GET, Global.APP_URL + "/findCities").responseJSON { (response) in
-            print(response.result.value)
-            let json: JSON = JSON(response.result.value!)
-            let data = json["data"].array
-            print(data)
-            for city in data! {
-                print(city)
-                self.cities.append(city.string!)
+        let pvc: ProgressViewController = ProgressViewController()
+        pvc.setLabelActivity("Downloading...")
+        pvc.showActivityIndicator(self.view)
+        if Util.isConnectedToNetwork() {
+            request(.GET, Global.APP_URL + "/findCities").responseJSON { (response) in
+                self.cities = []
+                print(response.result.value)
+                let json: JSON = JSON(response.result.value!)
+                let data = json["data"].array
+                print(data)
+                
+                for city in data! {
+                    print(city)
+                    self.cities.append(city.string!)
+                }
+                pvc.hideActivityIndicator()
+                print(self.cities)
             }
-            print(self.cities)
+        } else {
+            pvc.hideActivityIndicator()
+            Util.alert(self, title: "Internet Network", message: "Please turn on your 3G or WIFI")
         }
     }
 }
