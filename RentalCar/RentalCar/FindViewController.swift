@@ -196,7 +196,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
             subviews[1].text = self.formatteDate(date)
             self.dateFrom = date
             
-            if self.dateTo <= self.dateFrom {
+            if self.dateTo < self.dateFrom {
                 self.dateTo = self.dateFrom.addDays(2)
                 let subviews = self.dateToView.subviews.flatMap { $0 as? UILabel }
                 subviews[0].text = self.extractDay(self.dateTo)
@@ -331,6 +331,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
                                 //self.places.append(place.string!)
                             }
                             pvc.hideActivityIndicator()
+                            self.places = self.places.reverse()
                             print(self.places)
                         }
                     })
@@ -385,7 +386,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
                                         let price: Double = Double(car["rental_price"].string!)!
                                         let picture: String = car["picture"].string!
                                         let location_id: Int = Int(car["location_id"].string!)!
-                                        self.cars.append(Car(id: id, model: model, type: type, description: description, color: color, fuel: fuel, sits: sits, price: price, picture: picture, loc_id: location_id))
+                                        self.cars.append(Car(id: id, model: model, type: type, description: description, color: color, fuel: fuel, sits: sits, price: price, picture: picture, loc_id: location_id, from: self.formatteDateParamsBooked(self.dateFrom), to: self.formatteDateParamsBooked(self.dateTo)))
                                     }
                                     self.performSegueWithIdentifier("ResultSegue", sender: self)
                                 } else {
@@ -436,6 +437,13 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     private func formatteDateParams(date: NSDate) -> String {
         let formatter = NSDateFormatter();
         formatter.dateFormat = "dd/MM/yyyy";
+        formatter.timeZone = NSTimeZone.localTimeZone()
+        return formatter.stringFromDate(date);
+    }
+    
+    private func formatteDateParamsBooked(date: NSDate) -> String {
+        let formatter = NSDateFormatter();
+        formatter.dateFormat = "yyy-MM-dd";
         formatter.timeZone = NSTimeZone.localTimeZone()
         return formatter.stringFromDate(date);
     }

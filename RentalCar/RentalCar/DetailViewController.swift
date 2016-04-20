@@ -58,7 +58,7 @@ class DetailViewController: UIViewController {
             }
         });
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -66,6 +66,34 @@ class DetailViewController: UIViewController {
     
     @IBAction func bookAction(sender: AnyObject) {
         print("BOOK ...")
+        if Util.isConnectedToNetwork() {
+            let pvc: ProgressViewController = ProgressViewController()
+            pvc.showActivityIndicator(self.view)
+            print(self.car!.from)
+            request(.POST, Global.APP_URL + "/booked", parameters: [
+                "from": self.car!.from,
+                "to": self.car!.to,
+                "user_id": Global.user_id,
+                "car_id": self.car!.id
+                ], headers: ["X-CSRF-TOKEN": Global.token]).responseJSON { (response) in
+                    print(response)
+                    pvc.hideActivityIndicator()
+                    if response.response?.statusCode == 200 {
+                        //Util.alert(self, title: "RentalCar", message: "Congratulation, you are booked a car!")
+                        let alert = UIAlertController(title: "RentalCar", message:"Congratulation, you are booked a car!", preferredStyle: .Alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in
+                            print("EZDZEDZD")
+                            self.navigationController?.popToRootViewControllerAnimated(true)//.popViewControllerAnimated(true)
+                            })
+                        self.presentViewController(alert, animated: true){}
+
+                    } else {
+                        Util.alert(self, title: "RentalCar", message: "An error has occurred: \(response.result.error!.debugDescription)")
+                                            }
+                    //
+            }
+        } else {
+            Util.alert(self, title: "Internet Network", message: "Please turn on your 3G or WIFI")
+        }
     }
-    
 }

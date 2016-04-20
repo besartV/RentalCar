@@ -19,9 +19,13 @@ class Car {
     var price: Double
     var picture: String
     var location_id: Int
+    var from: String
+    var to: String
     
-    init(id: Int, model: String, type: String, description: String, color: String, fuel: String, sits: Int, price: Double, picture: String, loc_id: Int) {
+    init(id: Int, model: String, type: String, description: String, color: String, fuel: String, sits: Int, price: Double, picture: String, loc_id: Int, from: String, to: String) {
         self.id = id
+        self.from = from
+        self.to = to
         self.model = model
         self.type = type
         self.desc = description

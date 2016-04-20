@@ -15,6 +15,7 @@ class ResultViewController: UITableViewController {
     
     var cars: [Car]?
     var index: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("cars")
@@ -33,6 +34,8 @@ class ResultViewController: UITableViewController {
             destinationVC.car = self.cars![self.index!]
         }
     }
+    
+    
     
     //MARK: TableView Delegate
     

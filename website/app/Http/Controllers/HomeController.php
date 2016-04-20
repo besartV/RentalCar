@@ -45,7 +45,7 @@ class HomeController extends Controller
 
                 $rental->car = $rental->car()->get()[0];
                 $rental->location = $rental->location()->get()[0];
-                $rental->days = $diff->days == 0 ? 1 : $diff->days;
+                $rental->days = $diff->days == 0 ? 1 : $diff->days + 1;
             }
             //dd(session()->has('book'));
             return view('booking', ['rentals' => $rentals]);

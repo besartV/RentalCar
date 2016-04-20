@@ -107,8 +107,18 @@ class ApiController extends Controller
         } catch (Exception $e) {
             return Response::json(['error' => $e->getMessage()], 400);
         }
+        $rentals = JWTAuth::parseToken()->authenticate()->rentals()->get();
+        foreach($rentals as $rental) {
+            $from = new \DateTime($rental->from);
+            $to = new \DateTime($rental->to);
+            $diff = $from->diff($to);
 
-        return Response::json(['data' => JWTAuth::parseToken()->authenticate()->rentals()->get()]);
+            $rental->car = $rental->car()->get()[0];
+            $rental->location = $rental->location()->get()[0];
+            $rental->days = $diff->days == 0 ? 1 : $diff->days + 1;
+        }
+
+        return Response::json(['data' => $rentals]);
     }
 
     /**

@@ -69,6 +69,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             let json = JSON(response.result.value!)
                             print("JSON :::::: \(json)")
                             Global.token = json["token"].stringValue
+                            Global.user_id = (json["user"].object).valueForKey("id") as! Int
                             self.performSegueWithIdentifier("AppSegue", sender: nil)
                         } else {
                             Util.alert(self, title: "Sign in", message: response.result.value!["error"] as! String)

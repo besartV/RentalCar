@@ -11,11 +11,13 @@
 		4804C66A1CB5278B00BF4677 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4804C6691CB5278B00BF4677 /* ProgressViewController.swift */; };
 		482CC9B01CBE7B0400AC1919 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482CC9AF1CBE7B0400AC1919 /* DetailViewController.swift */; };
 		484B7F171CBE39E3008C2DFE /* CarCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484B7F161CBE39E3008C2DFE /* CarCellViewController.swift */; };
+		485B149F1CC76E2600712B37 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B149E1CC76E2600712B37 /* AboutViewController.swift */; };
 		4875DE3B1CA947D000ADEBE2 /* UserPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4875DE3A1CA947D000ADEBE2 /* UserPopoverViewController.swift */; };
 		4875DE3D1CA9567000ADEBE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4875DE3C1CA9567000ADEBE2 /* LoginViewController.swift */; };
 		4875DE3F1CA96D7E00ADEBE2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4875DE3E1CA96D7E00ADEBE2 /* RegisterViewController.swift */; };
 		489009021CC6947300BDA589 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489009011CC6947300BDA589 /* BookingViewController.swift */; };
 		489009041CC69C5C00BDA589 /* BookingCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489009031CC69C5C00BDA589 /* BookingCellViewController.swift */; };
+		489009061CC6C8C700BDA589 /* Rental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489009051CC6C8C700BDA589 /* Rental.swift */; };
 		48B8C7BD1CA20CDA001174E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B8C7BC1CA20CDA001174E3 /* AppDelegate.swift */; };
 		48B8C7BF1CA20CDA001174E3 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B8C7BE1CA20CDA001174E3 /* FindViewController.swift */; };
 		48B8C7C21CA20CDA001174E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B8C7C01CA20CDA001174E3 /* Main.storyboard */; };
@@ -33,11 +35,13 @@
 		4804C6691CB5278B00BF4677 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		482CC9AF1CBE7B0400AC1919 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		484B7F161CBE39E3008C2DFE /* CarCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarCellViewController.swift; sourceTree = "<group>"; };
+		485B149E1CC76E2600712B37 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		4875DE3A1CA947D000ADEBE2 /* UserPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPopoverViewController.swift; sourceTree = "<group>"; };
 		4875DE3C1CA9567000ADEBE2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4875DE3E1CA96D7E00ADEBE2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		489009011CC6947300BDA589 /* BookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		489009031CC69C5C00BDA589 /* BookingCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingCellViewController.swift; sourceTree = "<group>"; };
+		489009051CC6C8C700BDA589 /* Rental.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
 		48B8C7B91CA20CDA001174E3 /* RentalCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentalCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B8C7BC1CA20CDA001174E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48B8C7BE1CA20CDA001174E3 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				48B8C7D81CA21728001174E3 /* HomeViewController.swift */,
+				485B149E1CC76E2600712B37 /* AboutViewController.swift */,
 			);
 			name = home;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				48FA85621CBD73800017CCDC /* Car.swift */,
+				489009051CC6C8C700BDA589 /* Rental.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -318,10 +324,12 @@
 				48B8C7BD1CA20CDA001174E3 /* AppDelegate.swift in Sources */,
 				48FA85601CBD732F0017CCDC /* ResultViewController.swift in Sources */,
 				4875DE3D1CA9567000ADEBE2 /* LoginViewController.swift in Sources */,
+				485B149F1CC76E2600712B37 /* AboutViewController.swift in Sources */,
 				48FA85631CBD73800017CCDC /* Car.swift in Sources */,
 				4804C66A1CB5278B00BF4677 /* ProgressViewController.swift in Sources */,
 				48B8C7D31CA20D2D001174E3 /* SWRevealViewController.m in Sources */,
 				48B8C7D91CA21728001174E3 /* HomeViewController.swift in Sources */,
+				489009061CC6C8C700BDA589 /* Rental.swift in Sources */,
 				489009021CC6947300BDA589 /* BookingViewController.swift in Sources */,
 				484B7F171CBE39E3008C2DFE /* CarCellViewController.swift in Sources */,
 			);
