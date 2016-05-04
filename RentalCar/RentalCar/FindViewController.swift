@@ -157,7 +157,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     func dateFromGesture(sender: UITapGestureRecognizer) {
         self.fromCalendarPicker = EPCalendarPicker(startYear: 2015, endYear: 2017, multiSelection: false, selectedDates: [])
         self.fromCalendarPicker.calendarDelegate = self
-        self.fromCalendarPicker.startDate = self.dateFrom
+        self.fromCalendarPicker.startDate = NSDate()
         self.fromCalendarPicker.hightlightsToday = true
         self.fromCalendarPicker.barTintColor = Util.UIColorFromHex(0x5289B2)
         self.fromCalendarPicker.dateSelectionColor = Util.UIColorFromHex(0x5289B2)
@@ -185,8 +185,8 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     //MARK: UICalendarPicker Delegate
     func epCalendarPicker(calendar: EPCalendarPicker, didCancel error : NSError) {
         print("User cancelled selection")
-        
     }
+    
     func epCalendarPicker(calendar: EPCalendarPicker, didSelectDate date : NSDate) {
         switch calendar {
         case self.fromCalendarPicker:

@@ -20,10 +20,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var fuel: UILabel!
     @IBOutlet weak var picture: UIImageView!
+    @IBOutlet weak var detailTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.model.text = self.car!.model + " - " + self.car!.type
+        self.detailTitle.text = self.car!.model + " - " + self.car!.type
         self.price.text = String(self.car!.price) + "/day"
         self.color.text = self.car!.color
         self.desc.text = self.car!.desc
