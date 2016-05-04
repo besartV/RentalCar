@@ -40,7 +40,7 @@ Admin side: You can manage car, location, user
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [EPCalendarPicker](https://github.com/ipraba/EPCalendarPicker)
 - [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
-- Cocoapods: dependencies manager
+- [Cocoapods](https://cocoapods.org): dependencies manager
 
 ####Intallation
 1. git clone git@github.com:YMonnier/RentalCar.git
