@@ -1,5 +1,6 @@
 # RentalCar
 [![Swift 2.2](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
+
 Software Engineering Project 2016 - University of Lodz | Poland
 
 > Looking for a rental car for your holidays or for personal reasons? RentalCar propose you some rental car with your criteria. Put the city, the period of time and choose your car!
