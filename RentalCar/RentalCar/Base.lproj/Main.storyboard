@@ -835,41 +835,61 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-4O-Gef">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="XXP-hq-sqQ" secondAttribute="trailing" constant="15" id="CsM-uK-bpb"/>
+                                            <constraint firstItem="bT4-4O-Gef" firstAttribute="top" secondItem="751-8o-3Ty" secondAttribute="top" constant="-6" id="LTT-X3-IxO"/>
                                             <constraint firstItem="JOX-Cd-7b7" firstAttribute="top" secondItem="XXP-hq-sqQ" secondAttribute="bottom" constant="8" symbolic="YES" id="aex-Ru-Ra9"/>
+                                            <constraint firstItem="bT4-4O-Gef" firstAttribute="centerX" secondItem="751-8o-3Ty" secondAttribute="centerX" id="aja-bx-89k"/>
                                             <constraint firstItem="XXP-hq-sqQ" firstAttribute="leading" secondItem="751-8o-3Ty" secondAttribute="leading" constant="5" id="fm0-ww-gbR"/>
                                             <constraint firstItem="XXP-hq-sqQ" firstAttribute="top" secondItem="751-8o-3Ty" secondAttribute="topMargin" id="frC-1r-tt9"/>
                                             <constraint firstItem="XXP-hq-sqQ" firstAttribute="trailing" secondItem="JOX-Cd-7b7" secondAttribute="trailing" id="gm0-Ib-BVb"/>
                                             <constraint firstItem="XXP-hq-sqQ" firstAttribute="leading" secondItem="JOX-Cd-7b7" secondAttribute="leading" id="p6X-6t-Mah"/>
+                                            <constraint firstItem="JOX-Cd-7b7" firstAttribute="top" secondItem="bT4-4O-Gef" secondAttribute="bottom" constant="48" id="rQU-y5-Anq"/>
+                                            <constraint firstItem="bT4-4O-Gef" firstAttribute="leading" secondItem="751-8o-3Ty" secondAttribute="leading" constant="61" id="uax-8r-aZe"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="XXP-hq-sqQ"/>
                                                 <exclude reference="JOX-Cd-7b7"/>
+                                                <exclude reference="bT4-4O-Gef"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="aex-Ru-Ra9"/>
+                                                <exclude reference="rQU-y5-Anq"/>
                                                 <exclude reference="CsM-uK-bpb"/>
                                                 <exclude reference="fm0-ww-gbR"/>
                                                 <exclude reference="frC-1r-tt9"/>
                                                 <exclude reference="gm0-Ib-BVb"/>
                                                 <exclude reference="p6X-6t-Mah"/>
+                                                <exclude reference="LTT-X3-IxO"/>
+                                                <exclude reference="aja-bx-89k"/>
+                                                <exclude reference="uax-8r-aZe"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="XXP-hq-sqQ"/>
                                                 <include reference="JOX-Cd-7b7"/>
+                                                <include reference="bT4-4O-Gef"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="aex-Ru-Ra9"/>
+                                                <include reference="rQU-y5-Anq"/>
                                                 <include reference="CsM-uK-bpb"/>
                                                 <include reference="fm0-ww-gbR"/>
                                                 <include reference="frC-1r-tt9"/>
                                                 <include reference="gm0-Ib-BVb"/>
                                                 <include reference="p6X-6t-Mah"/>
+                                                <include reference="LTT-X3-IxO"/>
+                                                <include reference="aja-bx-89k"/>
+                                                <include reference="uax-8r-aZe"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -888,20 +908,31 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-ES-uED">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="mMe-9f-x4P" firstAttribute="bottom" secondItem="aBU-7o-8Gv" secondAttribute="bottomMargin" id="2ef-2H-qf6"/>
                                             <constraint firstItem="byT-b8-0Gm" firstAttribute="leading" secondItem="mMe-9f-x4P" secondAttribute="leading" id="5b0-Fn-lG9"/>
                                             <constraint firstItem="byT-b8-0Gm" firstAttribute="leading" secondItem="aBU-7o-8Gv" secondAttribute="leading" constant="15" id="9qG-s4-RP8"/>
                                             <constraint firstItem="mMe-9f-x4P" firstAttribute="top" secondItem="byT-b8-0Gm" secondAttribute="bottom" constant="8" symbolic="YES" id="BEk-ml-6XK"/>
+                                            <constraint firstItem="cP2-ES-uED" firstAttribute="top" secondItem="aBU-7o-8Gv" secondAttribute="top" constant="-5" id="Ilg-Ok-qQJ"/>
                                             <constraint firstAttribute="trailing" secondItem="byT-b8-0Gm" secondAttribute="trailing" id="PDC-hE-QsB"/>
+                                            <constraint firstItem="cP2-ES-uED" firstAttribute="leading" secondItem="aBU-7o-8Gv" secondAttribute="leading" constant="59" id="Zvi-cL-jNG"/>
                                             <constraint firstItem="byT-b8-0Gm" firstAttribute="trailing" secondItem="mMe-9f-x4P" secondAttribute="trailing" id="bXc-aw-jVO"/>
+                                            <constraint firstItem="cP2-ES-uED" firstAttribute="centerX" secondItem="aBU-7o-8Gv" secondAttribute="centerX" id="dvR-w8-BuN"/>
+                                            <constraint firstItem="mMe-9f-x4P" firstAttribute="top" secondItem="cP2-ES-uED" secondAttribute="bottom" constant="47" id="r4C-rt-Qp7"/>
                                             <constraint firstItem="byT-b8-0Gm" firstAttribute="top" secondItem="aBU-7o-8Gv" secondAttribute="topMargin" id="y8n-Ix-TfH"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="byT-b8-0Gm"/>
                                                 <exclude reference="mMe-9f-x4P"/>
+                                                <exclude reference="cP2-ES-uED"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="5b0-Fn-lG9"/>
@@ -909,14 +940,19 @@
                                                 <exclude reference="PDC-hE-QsB"/>
                                                 <exclude reference="bXc-aw-jVO"/>
                                                 <exclude reference="y8n-Ix-TfH"/>
+                                                <exclude reference="Ilg-Ok-qQJ"/>
+                                                <exclude reference="Zvi-cL-jNG"/>
+                                                <exclude reference="dvR-w8-BuN"/>
                                                 <exclude reference="2ef-2H-qf6"/>
                                                 <exclude reference="BEk-ml-6XK"/>
+                                                <exclude reference="r4C-rt-Qp7"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="byT-b8-0Gm"/>
                                                 <include reference="mMe-9f-x4P"/>
+                                                <include reference="cP2-ES-uED"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="5b0-Fn-lG9"/>
@@ -924,8 +960,12 @@
                                                 <include reference="PDC-hE-QsB"/>
                                                 <include reference="bXc-aw-jVO"/>
                                                 <include reference="y8n-Ix-TfH"/>
+                                                <include reference="Ilg-Ok-qQJ"/>
+                                                <include reference="Zvi-cL-jNG"/>
+                                                <include reference="dvR-w8-BuN"/>
                                                 <include reference="2ef-2H-qf6"/>
                                                 <include reference="BEk-ml-6XK"/>
+                                                <include reference="r4C-rt-Qp7"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -1336,7 +1376,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7Dd-aj-WHr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qF6-t4-khJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kD8-BU-cj7">
@@ -1382,26 +1422,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="STT-qv-HtH">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="J5J-00-vns"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="J5J-00-vns"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="J5J-00-vns"/>
-                                    </mask>
-                                </variation>
-                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mus-Lk-8Za">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
@@ -1601,6 +1621,26 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="STT-qv-HtH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="J5J-00-vns"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="J5J-00-vns"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="J5J-00-vns"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1658,7 +1698,6 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="kD8-BU-cj7"/>
-                                <exclude reference="STT-qv-HtH"/>
                                 <exclude reference="Mus-Lk-8Za"/>
                                 <exclude reference="92x-WM-NWg"/>
                                 <exclude reference="Xqp-1Z-K9D"/>
@@ -1670,6 +1709,7 @@
                                 <exclude reference="wrp-H3-czR"/>
                                 <exclude reference="3wp-Xd-tAM"/>
                                 <exclude reference="wnb-yJ-yb8"/>
+                                <exclude reference="STT-qv-HtH"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="CPy-p3-phG"/>
@@ -1721,7 +1761,6 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="kD8-BU-cj7"/>
-                                <include reference="STT-qv-HtH"/>
                                 <include reference="Mus-Lk-8Za"/>
                                 <include reference="92x-WM-NWg"/>
                                 <include reference="Xqp-1Z-K9D"/>
@@ -1733,6 +1772,7 @@
                                 <include reference="wrp-H3-czR"/>
                                 <include reference="3wp-Xd-tAM"/>
                                 <include reference="wnb-yJ-yb8"/>
+                                <include reference="STT-qv-HtH"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="CPy-p3-phG"/>
@@ -1787,6 +1827,7 @@
                     <connections>
                         <outlet property="color" destination="Xqp-1Z-K9D" id="uFx-M8-yPP"/>
                         <outlet property="desc" destination="STT-qv-HtH" id="ZDn-Yz-z1o"/>
+                        <outlet property="detailTitle" destination="979-H7-cHB" id="vAT-Dy-Blh"/>
                         <outlet property="fuel" destination="Jdm-3d-wsq" id="pgh-f6-If4"/>
                         <outlet property="model" destination="92x-WM-NWg" id="mmc-Ct-6pL"/>
                         <outlet property="picture" destination="wnb-yJ-yb8" id="6go-qp-sbY"/>
@@ -1825,6 +1866,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6jT-qZ-mzd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rf5-CG-kPR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOFTWARE ENGINEERING PROJECT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72g-2U-Cjt">
@@ -1833,7 +1875,7 @@
                                     <constraint firstAttribute="height" constant="29" id="g7L-lI-pAB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1873,13 +1915,13 @@
                                 <exclude reference="j5d-GA-ANf"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="TwX-P0-wJQ"/>
                                 <exclude reference="Dvx-0k-0Ob"/>
                                 <exclude reference="Gal-xK-992"/>
                                 <exclude reference="H3P-nd-vGj"/>
                                 <exclude reference="KwH-Kq-d5e"/>
                                 <exclude reference="qA5-dx-5dm"/>
                                 <exclude reference="7Xd-1f-a4c"/>
-                                <exclude reference="TwX-P0-wJQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1888,13 +1930,13 @@
                                 <include reference="j5d-GA-ANf"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="TwX-P0-wJQ"/>
                                 <include reference="Dvx-0k-0Ob"/>
                                 <include reference="Gal-xK-992"/>
                                 <include reference="H3P-nd-vGj"/>
                                 <include reference="KwH-Kq-d5e"/>
                                 <include reference="qA5-dx-5dm"/>
                                 <include reference="7Xd-1f-a4c"/>
-                                <include reference="TwX-P0-wJQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -2047,31 +2089,31 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#RC123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-R7-oN4">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MODEL-TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lr-FD-GY7">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23/23/1234 to 12/45/1234 (3 days)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooH-rV-2FE">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30€/day - 90€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKt-uH-q3C">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOv-lG-d2y">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
