@@ -1,9 +1,10 @@
 # RentalCar
+[![Swift 2.2](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
 Software Engineering Project 2016 - University of Lodz | Poland
 
 > Looking for a rental car for your holidays or for personal reasons? RentalCar propose you some rental car with your criteria. Put the city, the period of time and choose your car!
 
-Creation of rental car application (Website and iOS Application). The most important of this application will be the web service(Restful API). This web service will use to communicate all information to iOS application. All information are saved into a database.
+Creation of rental car application (Website and Swift iOS Application). The most important of this application will be the web service(Restful API). This web service will use to communicate all information to iOS application. All information are saved into a database.
 
 ##Website
 
@@ -36,6 +37,7 @@ Admin side: You can manage car, location, user
 
 ##iOS Application
 ####Components and Libraries
+- Swift 2.2
 - Deployment iOS 9.3
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [EPCalendarPicker](https://github.com/ipraba/EPCalendarPicker)
