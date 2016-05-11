@@ -28,11 +28,11 @@ Admin side: You can manage car, location, user
 - Composer: dependencies manager
 
 ####Intallation
-1. git clone git@github.com:YMonnier/RentalCar.git
+1. `git clone git@github.com:YMonnier/RentalCar.git`
 2. put website folder on your server
-3. cd website
-4. composer install - IF you don't have composer click [here](https://getcomposer.org)
-5. php artisan migrate --seed - IF you receive a "class not found" error when running migrations, try running the `composer dump-autoload` command and re-issuing the migrate command.
+3. `cd website`
+4. `composer install` - IF you don't have composer click [here](https://getcomposer.org)
+5. `php artisan migrate --seed` - IF you receive a "class not found" error when running migrations, try running the `composer dump-autoload` command and re-issuing the migrate command.
 6. now you can login on the website
   - client user@car.com | password: secret
   - admin admin@car.com | password: secret
@@ -47,9 +47,9 @@ Admin side: You can manage car, location, user
 - [Cocoapods](https://cocoapods.org): dependencies manager
 
 ####Intallation
-1. git clone git@github.com:YMonnier/RentalCar.git
-2. cd RentalCar
-3. pod install - IF you don't have CocoaPods click [here](https://cocoapods.org)
+1. `git clone git@github.com:YMonnier/RentalCar.git`
+2. `cd RentalCar`
+3. `pod install` - IF you don't have CocoaPods click [here](https://cocoapods.org)
 4. change host url of variable `APP_URL`and `APP_STORAGE` in AppDelegate file to your host server
 5. run application!
 
