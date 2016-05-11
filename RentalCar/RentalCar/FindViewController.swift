@@ -47,7 +47,6 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     var dateTo: NSDate = NSDate()
     var dateFromString: String = ""
     var dateToString: String = ""
-    @IBOutlet weak var toLabel: UILabel!
     
     //PickerView
     @IBOutlet weak var city: UITextField!
@@ -79,11 +78,7 @@ class FindViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         self.dateToView.layer.borderColor = UIColor.grayColor().CGColor
         self.dateToView.layer.borderWidth = 1
         self.dateToView.layer.cornerRadius = 5
-        self.toLabel.layer.cornerRadius = 20
-        self.toLabel.layer.borderColor = UIColor.blackColor().CGColor
-        self.toLabel.layer.borderWidth = 1
-        self.toLabel.layer.backgroundColor = Util.UIColorFromHex(0x5289B2).CGColor
-        
+
         //DatePicker
         let handlerDateFrom = UITapGestureRecognizer(target: self, action: #selector(FindViewController.dateFromGesture(_:)))
         let handlerDateTo = UITapGestureRecognizer(target: self, action: #selector(FindViewController.dateToGesture(_:)))
